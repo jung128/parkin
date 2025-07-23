@@ -31,6 +31,8 @@ const ItemPage = () => {
                     <li>주차장 이용(기능 내용 개인적 수정)</li>
                     <li>리뷰(기능 내용 개인적 수정)</li>
                 </ul>
+            </div>
+            <div className="contents">
                 <div className="item-content">
                     <h3></h3>
                     <p></p>
@@ -56,7 +58,6 @@ const ItemPage = () => {
                     <p></p>
                     <p></p>
                 </div>
-
             </div>
             <Footer/>
         </div>

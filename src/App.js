@@ -3,14 +3,16 @@ import Header from "./Components/Header";
 import Banner from "./Components/Banner";
 import Footer from "./Components/Footer";
 import ContentsList from "./Components/ContentsList";
+import ItemPage from "./Components/ItemPage";
 
 const App = () => {
   return (
     <div>
-      <Header />
+      <ItemPage/>
+      {/* <Header />
       <Banner />
       <ContentsList />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 };
