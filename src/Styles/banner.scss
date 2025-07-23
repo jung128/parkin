@@ -4,6 +4,7 @@
   position: relative;
   overflow: hidden;
   margin: 0 auto;
+  border: none;
 
   .slider-wrapper {
     display: flex;
@@ -22,7 +23,7 @@
 
   .nav-arrow {
     position: absolute;
-    top: 50%;
+    top: 37.5%;
     transform: translateY(-50%);
     font-size: 50px;
     color: #111;
@@ -115,7 +116,7 @@
 
 .text-nav-button {
   position: absolute;
-  top: 40%;
+  top: 42.5%;
   transform: translateY(-50%);
   width: 40px;
   height: 40px;
@@ -128,7 +129,7 @@
   z-index: 10;
 }
 .text-nav-button:hover {
-  color: var(--color-gray);
+  color: var(--color-main);
 }
 
 .text-nav-button.prev {
@@ -162,7 +163,7 @@
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
-  border-radius: 8px;
+
 }
 
 .slider-wrapper {

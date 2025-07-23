@@ -46,14 +46,14 @@ const Banner = () => {
     return () => window.removeEventListener('resize', updateDeviceMode);
   }, []);
 
-  // 10초마다 자동으로 슬라이드 변경하는 기능 
+  // 5초마다 자동으로 슬라이드 변경하는 기능 
   useEffect(() => {
     const autoSlideInterval = setInterval(() => {
       const step = deviceMode === "tablet" ? 3 : 1;
       const maxIndex = deviceMode === "tablet" ? slides.length - 3 : slides.length - 1;
       
       setCurrentSlide((prev) => (prev + step > maxIndex ? 0 : prev + step));
-    }, 10000);
+    }, 5000);
     
     return () => clearInterval(autoSlideInterval);
   }, [deviceMode, slides.length]);
