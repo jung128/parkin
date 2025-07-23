@@ -1,8 +1,7 @@
 .follow-banner {
-  @include mobile{
-     display: none; // 모바일 숨김
-  }
-
+@media (max-width: 767px) {
+    display: none;
+}
   @include tablet {
     display: block;
     position: absolute; // 절대 위치
