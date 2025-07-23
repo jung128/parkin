@@ -24,18 +24,20 @@ const MainContent = () => {
             }
             alt={section.img.alt}
           />
-          <h2>{section.title}</h2>
-          <h3>
-            {section.sub}
-            <span>{section.sub2}</span>
-          </h3>
-          <div>
-            <p>{section.text1}</p>
-            <p>{section.text2}</p>
-            <p>{section.text3}</p>
-            <p>{section.text4}</p>
+          <div className="main-title">
+            <h2>{section.title}</h2>
+            <h3>
+              {section.sub}
+              <span>{section.sub2}</span>
+            </h3>
+            <div className="main-text">
+              <p>{section.text1}</p>
+              <p>{section.text2}</p>
+              <p>{section.text3}</p>
+              <p>{section.text4}</p>
+            </div>
+            <button>서비스 자세히 보기　〉</button>
           </div>
-          <button>서비스 바로가기 〉</button>
         </section>
       ))}
     </main>
