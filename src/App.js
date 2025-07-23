@@ -8,10 +8,10 @@ import ContentsList from "./Components/ContentsList";
 const App = () => {
   return (
     <div>
-      <ItemPage/>
       <Header />
       <Banner />
       <ContentsList />
+      <ItemPage/>
       <Footer />
     </div>
   );

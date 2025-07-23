@@ -58,7 +58,6 @@ const ItemPage = () => {
                 </div>
 
             </div>
-            <Footer/>
         </div>
     );
 };

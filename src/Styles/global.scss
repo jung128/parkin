@@ -1,6 +1,7 @@
 //mixin 같이 공통 파일은 App.scss로 옮겼어요 (수진) 이 메모는 병합할때 지워주세요
 
 //컴포넌트 파일
+@import "./mixin.scss";
 @import "./header.scss";
 @import "./banner.scss";
 @import "./footer.scss";
