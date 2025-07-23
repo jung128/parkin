@@ -1,0 +1,21 @@
+@import './font.scss';
+@import './mixin.scss';
+
+//컴포넌트 파일
+@import './header.scss';
+@import './banner.scss';
+@import './footer.scss';
+
+:root{
+    --color-main:#FFA500;
+    --color-sub:#FFCD00;
+    --color-btn: #FF6103;
+    --color-white:#FFFFFF;
+    --color-bg:#FEF9F3;
+    --color-error:#FF0000; 
+    --color-gray:#B6B5B3; 
+    --color-dark-gray:#8D8B84; 
+    --color-point:#426A2D;
+    --color-main-font:#2C2C2C; 
+    --color-sub-font:#F4F4F4;  
+}

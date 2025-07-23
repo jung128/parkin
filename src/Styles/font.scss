@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SUIT-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.main-font {
+    font-size: 32px;
+    font-family: 'SBAggroB';
+    font-weight: bold;
+    font-style: normal;
+    color: var(--color-main-font);
+}
+.sub-font {
+    font-size: 24px;
+    font-family: 'SUIT-Regular';
+    font-weight: normal;
+    font-style: normal;
+    color: var(--color-sub-font);
+}
