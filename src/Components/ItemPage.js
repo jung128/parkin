@@ -1,11 +1,13 @@
+
 import Footer from "./Footer";
 import Header from "./Header";
+
 
 // 위치값 혹은 개인 기능 페이지 애니메이션 효과는 react혹은 css로 선택하여 진행해 주시면 됩니다
 const ItemPage = () => {
     return (
         <div>
-            <Header />
+            <Header/>
             <div className="top-item">
                 {/* 이미지도 기능페이지에 맞게 개인적으로 수정해서 사용 하시면 됩니다! */}
                 <img src="../image/images/save.jpg" alt="메인 이미지" className="shrink" />
@@ -26,7 +28,32 @@ const ItemPage = () => {
                     <li>주차장 이용(기능 내용 개인적 수정)</li>
                     <li>리뷰(기능 내용 개인적 수정)</li>
                 </ul>
-                <img />
+                <div className="item-content">
+                    <h3></h3>
+                    <p></p>
+                    <img />
+                    <p></p>
+                    <p></p>
+                </div>
+                <div className="item-content">
+                    <h3></h3>
+                    <img />
+                    <p></p>
+                    <p></p>
+                </div>
+                <div className="item-content">
+                    <h3></h3>
+                    <img />
+                    <p></p>
+                    <p></p>
+                </div>
+                <div className="item-content">
+                    <h3></h3>
+                    <img />
+                    <p></p>
+                    <p></p>
+                </div>
+                
             </div>
             <Footer />
         </div>

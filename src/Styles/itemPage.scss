@@ -81,6 +81,7 @@
 @include tablet {
     //상단 이미지 및 기능 제목, 간단내용
     .top-item {
+        display: flex;
         img {
             margin-bottom: 10rem auto;
             max-width: 100%;
