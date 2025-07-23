@@ -18,10 +18,10 @@ const ItemPage = () => {
             <div className="item-list">
                 <h3>상세 설명</h3>
                 <ul>
-                    <li>내 주차장 공유</li>
-                    <li>주차장 등록</li>
-                    <li>주차장 이용</li>
-                    <li>리뷰</li>
+                    <li>내 주차장 공유(기능 내용 개인적 수정)</li>
+                    <li>주차장 등록(기능 내용 개인적 수정)</li>
+                    <li>주차장 이용(기능 내용 개인적 수정)</li>
+                    <li>리뷰(기능 내용 개인적 수정)</li>
                 </ul>
                 <img />
             </div>
