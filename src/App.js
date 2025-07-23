@@ -6,9 +6,10 @@ import Footer from "./Components/Footer";
 const App = () => {
   return (
     <div>
-
+      <Header />
+      <Banner />
+      <Footer />
     </div>
   );
 };
-
 export default App;
