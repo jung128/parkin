@@ -82,25 +82,26 @@
     //상단 이미지 및 기능 제목, 간단내용
     .top-item {
         display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
         img {
-            margin-bottom: 10rem auto;
-            max-width: 100%;
-            height: auto;
+            max-width: 50%;
+            height: 60%;
         }
 
         h1 {
             color: var(--color-main);
-            margin: 5rem auto;
-            @include main-big;
+            margin: 3.5rem auto;
+            margin-top: 5rem;
+            @include main-large;
         }
-
         p {
             text-align: center;
             margin-bottom: 5rem;
-            @include sub-medium;
+            @include sub-basic;
             font-weight: bolder;
         }
-
     }
 
     .item-list {
@@ -164,30 +165,24 @@
 @include desktop {
     //상단 이미지 및 기능 제목, 간단내용
     .top-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
         img {
-            margin: 0 auto 15rem;
-            max-width: 100%;
-            height: auto;
-            display: block;
-            transition: max-width 0.5s ease-in-out;
-
-            //이미지 애니메이션 효과 처러 완료(className 수정 x)
-            &.shrink {
-                max-width: 70%;
-            }
+            max-width: 60%;
+            height: 60%;
         }
-
 
         h1 {
             color: var(--color-main);
-            margin: 10rem auto;
-            @include main-big;
+            margin: 5rem auto;
+            @include main-large;
         }
-
         p {
             text-align: center;
-            margin-bottom: 7rem;
-            @include sub-medium;
+            margin-bottom: 5rem;
+            @include sub-basic;
             font-weight: bolder;
         }
     }
