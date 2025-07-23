@@ -6,7 +6,7 @@ const ItemPage = () => {
         <div>
             <Header/>
             <div className="top-item">
-            <img/>
+            <img src="../image/images/main.jpg" alt="메인 이미지" className="shrink"/>
             <h1>개인 주차장 공유</h1>
                 <p>내 주차장, 이제는 공유하세요!<br/>
 개인 주차공간 공유 기능 사용하지 않는 주차 공간, <br/>
