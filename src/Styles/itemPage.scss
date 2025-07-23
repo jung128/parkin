@@ -1,3 +1,4 @@
+//상단 이미지 및 기능 제목, 간단내용
 .top-item {
     img {
         margin-bottom: 5rem auto;
@@ -21,6 +22,7 @@
     }
 }
 
+//설명 부분 목록
 .item-list {
     display: flex;
     justify-content: center;
@@ -34,6 +36,7 @@
         margin: 3rem auto;
     }
 
+    //클릭 시 위치 이동값 개인적 으로 위치 맞춰지게 추가 필수
     ul {
         display: flex;
         justify-content: space-around;
@@ -47,7 +50,7 @@
             padding: 0.5rem 1.5rem;
             cursor: pointer;
 
-            // 밑줄 가상 요소
+            // 밑줄 호버처리 애니메이션
             &::after {
                 content: "";
                 position: absolute;
@@ -67,6 +70,8 @@
     }
 }
 
+
+//테블릿 사이즈
 @mixin tablet {
     @media (min-width: 768px) and (max-width: 1023px) {
         @content;
@@ -74,6 +79,7 @@
 }
 
 @include tablet {
+    //상단 이미지 및 기능 제목, 간단내용
     .top-item {
         img {
             margin-bottom: 10rem auto;
@@ -109,7 +115,8 @@
             margin: 3rem auto;
         }
 
-ul {
+        //클릭 시 위치 이동값 개인적 으로 위치 맞춰지게 추가 필수
+    ul {
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -123,7 +130,7 @@ ul {
             padding: 0.5rem 1.5rem;
             cursor: pointer;
 
-            // 밑줄 가상 요소
+            // 밑줄 호버처리 애니메이션
             &::after {
                 content: "";
                 position: absolute;
@@ -145,6 +152,8 @@ ul {
 
 }
 
+
+//데스크탑 사이즈
 @mixin desktop {
     @media (min-width:1024px) {
         @content;
@@ -152,6 +161,7 @@ ul {
 }
 
 @include desktop {
+    //상단 이미지 및 기능 제목, 간단내용
     .top-item {
         img {
             margin: 0 auto 15rem;
@@ -160,6 +170,7 @@ ul {
             display: block;
             transition: max-width 0.5s ease-in-out;
 
+            //이미지 애니메이션 효과 처러 완료(className 수정 x)
             &.shrink {
                 max-width: 70%;
             }
@@ -193,7 +204,8 @@ ul {
             margin: 3rem auto;
         }
 
-ul {
+        //클릭 시 위치 이동값 개인적 으로 위치 맞춰지게 추가 필수
+    ul {
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -207,7 +219,7 @@ ul {
             padding: 0.5rem 1.5rem;
             cursor: pointer;
 
-            // 밑줄 가상 요소
+            // 밑줄 호버처리 애니메이션
             &::after {
                 content: "";
                 position: absolute;
