@@ -1,21 +1,25 @@
-@import './font.scss';
-@import './mixin.scss';
+//mixin 같이 공통 파일은 App.scss로 옮겼어요 (수진) 이 메모는 병합할때 지워주세요
 
 //컴포넌트 파일
-@import './header.scss';
-@import './banner.scss';
-@import './footer.scss';
+@import "./header.scss";
+@import "./banner.scss";
+@import "./footer.scss";
+@import "./contentslist.scss";
+@import "./circle.scss";
 
-:root{
-    --color-main:#FFA500;
-    --color-sub:#FFCD00;
-    --color-btn: #FF6103;
-    --color-white:#FFFFFF;
-    --color-bg:#FEF9F3;
-    --color-error:#FF0000; 
-    --color-gray:#B6B5B3; 
-    --color-dark-gray:#8D8B84; 
-    --color-point:#426A2D;
-    --color-main-font:#2C2C2C; 
-    --color-sub-font:#F4F4F4;  
+:root {
+  --color-main: #ffa500;
+  --color-sub: #ffcd00;
+  --color-btn: #ff6103;
+  --color-bg: #fef9f3;
+  --color-error: #ff0000;
+  --color-point: #426a2d;
+
+  --color-white: #ffffff;
+  --color-light-gray: #dadada;
+  --color-gray: #b6b5b3;
+  --color-dark-gray: #8d8b84;
+
+  --color-main-font: #2c2c2c;
+  --color-sub-font: #f4f4f4;
 }

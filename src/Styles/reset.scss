@@ -11,6 +11,17 @@ a{
 li{
   list-style: none;
 }
+//바디 추가 (수진) 이 메모 병합할때 지워주세요
+body{
+  font-family: 'SUIT';
+  font-weight: 500;
+  word-break: keep-all;
+  background-color: var(--color-bg);
+}
+h1{
+  font-family: 'SBAggroB';
+  font-weight: 300;
+}
 button{ 
-  cursor: pointer;
+  cursor: pointer; 
 }
