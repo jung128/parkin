@@ -1,0 +1,48 @@
+.circle-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  .circle-title {
+    margin: 1rem 0;
+    @include main-large;
+    font-size: $font-medium;
+    span {
+      color: var(--color-main);
+    }
+  }
+  .circle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 0 0.5rem;
+      .circle-bg {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: var(--color-white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        font-size: $font-medium;
+        color: var(--color-sub);
+        margin: 0.5rem 0;
+      }
+      p {
+        @include main-small;
+        font-size: 0.6rem;
+        line-height: $line-height-normal;
+      }
+    }
+  }
+}

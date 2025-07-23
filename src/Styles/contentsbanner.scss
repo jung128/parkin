@@ -1,0 +1,17 @@
+.contents-banner {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  .CBtxt {
+    h2 {
+    }
+    p {
+    }
+    button {
+      @include move-btn-style();
+      width: 50%;
+    }
+  }
+  img {
+  }
+}
