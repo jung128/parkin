@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import keywordData from "../assets/keywords.json";
+import { useNavigate } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -17,6 +18,12 @@ const MainContent = () => {
     handleResize();
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/ItemPage'); // ItemPage로 이동
+  };
+
 
 useEffect(() => {
   sectionsRef.current.forEach((el) => {
@@ -69,7 +76,7 @@ useEffect(() => {
               <p>{section.text3}</p>
               <p>{section.text4}</p>
             </div>
-            <button>서비스 자세히 보기　〉</button>
+            <button onClick={handleClick}>서비스 자세히 보기　〉</button>
           </div>
         </section>
       ))}

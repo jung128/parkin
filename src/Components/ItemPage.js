@@ -26,37 +26,41 @@ const ItemPage = () => {
             <div className="item-list">
                 <h3>상세 설명</h3>
                 <ul>
-                    <li>내 주차장 공유(기능 내용 개인적 수정)</li>
-                    <li>주차장 등록(기능 내용 개인적 수정)</li>
-                    <li>주차장 이용(기능 내용 개인적 수정)</li>
-                    <li>리뷰(기능 내용 개인적 수정)</li>
+                    <li><button>내 주차장 공유(기능 내용 개인적 수정)</button></li>
+                    <li><button>주차장 등록(기능 내용 개인적 수정)</button></li>
+                    <li><button>주차장 이용(기능 내용 개인적 수정)</button></li>
+                    <li><button>리뷰(기능 내용 개인적 수정)</button></li>
                 </ul>
-                <div className="item-content">
-                    <h3></h3>
-                    <p></p>
-                    <img />
-                    <p></p>
-                    <p></p>
-                </div>
-                <div className="item-content">
-                    <h3></h3>
-                    <img />
-                    <p></p>
-                    <p></p>
-                </div>
-                <div className="item-content">
-                    <h3></h3>
-                    <img />
-                    <p></p>
-                    <p></p>
-                </div>
-                <div className="item-content">
-                    <h3></h3>
-                    <img />
-                    <p></p>
-                    <p></p>
-                </div>
+            </div>
 
+
+            {/* 여기 부분은 삭제 하신 후 개인 적으로 폼 만들어 주시면 됩니다 */}
+            <div className="contents">
+                <div className="item-content">
+                    <h3></h3>
+                    <p></p>
+                    <img />
+                    <p></p>
+                    <p></p>
+                </div>
+                <div className="item-content">
+                    <h3></h3>
+                    <img />
+                    <p></p>
+                    <p></p>
+                </div>
+                <div className="item-content">
+                    <h3></h3>
+                    <img />
+                    <p></p>
+                    <p></p>
+                </div>
+                <div className="item-content">
+                    <h3></h3>
+                    <img />
+                    <p></p>
+                    <p></p>
+                </div>
             </div>
         </div>
     );
