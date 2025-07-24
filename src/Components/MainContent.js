@@ -20,8 +20,19 @@ const MainContent = () => {
   }, []);
   const navigate = useNavigate();
 
-  const handleClick = () => {
-    navigate('/ItemPage'); // ItemPage로 이동
+  const handleClick = (idx) => {
+    if( idx === 0 ){
+      navigate('/ItemPage'); // ItemPage로 이동
+    }if(idx===1){
+      navigate('/ItemPagetwo');
+    }if(idx ===2){
+
+    }if(idx === 3){
+
+    }
+    if(idx === 4){
+
+    }
   };
 
 
@@ -76,7 +87,7 @@ useEffect(() => {
               <p>{section.text3}</p>
               <p>{section.text4}</p>
             </div>
-            <button onClick={handleClick}>서비스 자세히 보기　〉</button>
+            <button onClick={()=>{handleClick(idx)}}>서비스 자세히 보기　〉</button>
           </div>
         </section>
       ))}
