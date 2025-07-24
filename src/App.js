@@ -1,21 +1,25 @@
 import "./App.scss";
-import Header from "./Components/Header";
-import Banner from "./Components/Banner";
-import Footer from "./Components/Footer";
 import ItemPage from "./Components/ItemPage";
-import ContentsList from "./Components/ContentsList";
-import Followbanner from "./Components/Followbanner";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import MainPage from "./Components/MainPage";
+import ItemPageTwo from "./Components/ItemPageTwo";
+import ItemPageThree from "./Components/ItemPageThree";
+import ItemPageFour from "./Components/ItemPageFour";
+import ItemPageFive from "./Components/ItemPageFive";
 
 const App = () => {
   return (
     <div>
-      <Followbanner />
-      <Header />
-      <Banner />
-      <ContentsList />
-      <ItemPage/>
-      <Followbanner />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainPage/>}/>
+          <Route path="/itempage" element={<ItemPage/>}/>
+          <Route path="/itempagtwo" element={<ItemPageTwo/>}/>
+          <Route path="/itempagthree" element={<ItemPageThree/>}/>
+          <Route path="/itempagfour" element={<ItemPageFour/>}/>
+          <Route path="/itempagefive" element={<ItemPageFive/>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };
