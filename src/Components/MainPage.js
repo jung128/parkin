@@ -4,6 +4,7 @@ import Followbanner from "./Followbanner";
 import Footer from "./Footer";
 import Header from "./Header";
 import ItemPage from "./ItemPage";
+import ItemPageFour from "./ItemPageFour";
 
 const MainPage = () => {
     return (
@@ -14,6 +15,7 @@ const MainPage = () => {
             <Banner/>
             <ContentsList/>
             <Footer/>
+            <ItemPageFour/>
         </div>
     );
 };

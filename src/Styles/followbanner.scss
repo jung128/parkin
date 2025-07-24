@@ -1,12 +1,4 @@
 .follow-banner {
-  @include mobile {
-    display: none; // 모바일에서 숨김
-  }
-
-  @include mobile {
-    display: none; // 모바일에서 숨김
-  }
-
   @include tablet {
     display: block;
     position: fixed;
