@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Banner from "./Banner";
 import ContentsList from "./ContentsList";
 import Followbanner from "./Followbanner";

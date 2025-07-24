@@ -1,5 +1,4 @@
 import "./App.scss";
-import ItemPage from "./Components/ItemPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainPage from "./Components/MainPage";
 
