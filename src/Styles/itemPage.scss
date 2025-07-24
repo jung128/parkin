@@ -59,7 +59,7 @@
             padding: 0.5rem 1.5rem;
             cursor: pointer;
 
-            // 밑줄 호버처리 애니메이션
+            // 밑줄 호버처리 애니메이션 절대 수정 금지
             &::after {
                 content: "";
                 position: absolute;
