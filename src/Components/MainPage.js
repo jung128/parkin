@@ -7,8 +7,8 @@ import Header from "./Header";
 const MainPage = () => {
     return (
         <div>
-            <Followbanner/>
             <Header/>
+            <Followbanner/>
             <Banner/>
             <ContentsList/>
             <Followbanner/>

@@ -1,13 +1,10 @@
 import Footer from "./Footer";
 import Header from "./Header";
 
-
-// 위치값 혹은 개인 기능 페이지 애니메이션 효과는 react혹은 css로 선택하여 진행해 주시면 됩니다
-const ItemPage = () => {
+const ItemPageFive = () => {
     return (
         <div>
-
-            {/* .주차장 실시간 빈자리 확인 - 지원 */}
+            {/* 주차장 개인공유 (김율) */}
             <Header/>
             <div className="top-item">
 
@@ -69,4 +66,4 @@ const ItemPage = () => {
     );
 };
 
-export default ItemPage;
+export default ItemPageFive;

@@ -8,12 +8,12 @@ const Banner = () => {
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   const slides = [
-    "/image/images/main.jpg",
-    "/image/images/save.jpg",
-    "/image/images/membership.jpg",
-    "/image/images/CCTV.jpg",
-    "/image/images/cupon.jpg",
-    "/image/images/navi.jpg"
+    "/image/images/main_desk.jpg",
+    "/image/images/save_desk.jpg",
+    "/image/images/membership_desk.jpg",
+    "/image/images/CCT_desk.jpg",
+    "/image/images/cupon_desk.jpg",
+    "/image/images/navi_desk.jpg"
   ];
 
   // 슬라이드 복제 - 무한 루프 효과를 위해
