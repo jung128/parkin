@@ -85,20 +85,3 @@
     }
   }
 }
-
-/*
-    transition: all 0.5s;
-    @include tablet {
-    }
-    @include desktop {
-    }
-
-    transition: all 0.5s;
-    @include tablet {
-      @include main-large;
-    }
-    @include desktop {
-      @include main-big;
-      font-weight: 500;
-    }
-*/
