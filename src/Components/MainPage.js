@@ -10,13 +10,10 @@ const MainPage = () => {
         <div>
             <Header/>
             <Followbanner/>
-            <Header/>
             <ItemPage />
             <Banner/>
             <ContentsList/>
-            <Followbanner/>
             <Footer/>
-
         </div>
     );
 };

@@ -7,10 +7,8 @@ const ItemPageFour = () => {
             {/* 안전을 위한 cctv (정회윤) */}
             <Header/>
             <div className="top-item">
-
-
                 {/* 이미지도 기능페이지에 맞게 개인적으로 수정해서 사용 하시면 됩니다! */}
-                <img src="../image/images/save.jpg" alt="메인 이미지" className="shrink" />
+                <img src="/image/images/junging/cctvimg.jpg" alt="메인 이미지" className="shrink" />
                 <div className="top-text">
                     <h1>안전을 위한 cctv </h1>
                     <p>주차장 상황, 실시간으로 확인하세요<br />
@@ -36,14 +34,14 @@ const ItemPageFour = () => {
             <div className="contents">
                 <div className="item-content">
                     <h3>이런 분들께 꼭 필요해요</h3>
-                    <img />
+                    <img src="/image/images/junging/full.jpg" alt="메인 이미지" className="shrink2" />
                     <p>주차하러 갔다가 자리가 없어서 되돌아온 분</p>
                     <p>늦은 밤이나 이른 아침 주차가 걱정되는 분 </p>
                     <p>주차장 관리자로서 현장 상황을 실시간으로 모니터링하고 싶은 분</p>
                 </div>
                 <div className="item-content">
                     <h3>어떻게 이용하나요?</h3>
-                    <img />
+                    <img src="/image/images/junging/pp.jpg" alt="메인 이미지" className="shrink3" />
                     <ul>
                         <p>주차장 선택</p>
                         <li>위치 기반으로 근처 주차장 검색</li>
@@ -63,14 +61,13 @@ const ItemPageFour = () => {
                 </div>
                 <div className="item-content">
                     <h3>리얼 후기</h3>
-                    <img />
+                    <img src="/image/images/junging/men.jpg" alt="메인 이미지" className="shrink" />
                     <p>“주차장에 도착하기 전에 CCTV로 확인하니 너무 편해요.
                         헛걸음 안 하게 돼서 시간 절약돼요!” <br></br>-지은, 직장인-</p>
                     <p>“혼자 야근할 때 무서웠는데, CCTV로 상황 확인하고 나니 안심됐어요.” -선아, 대학생-</p>
                 </div>
                 <div className="item-content">
                     <h3>지금 바로 시작해보세요! 복잡한 주차장, 이제는 눈으로 직접 보고 판단하는 시대! 당신의 주차를 더 똑똑하게 만드는 실시간 CCTV, 지금 만나보세요.</h3>
-                    <img />
                 </div>
             </div>
             <Footer/>
