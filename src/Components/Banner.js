@@ -8,6 +8,7 @@ const Banner = () => {
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   const slides = [
+
     "/image/images/main_desk.jpg",
     "/image/images/save_desk.jpg",
     "/image/images/membership_desk.jpg",
