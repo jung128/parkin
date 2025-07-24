@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import keywordData from "../assets/keywords.json";
+import { useNavigate } from "react-router-dom";
 
 const MainContent = () => {
   const [isTablet, setIsTablet] = useState(window.innerWidth >= 768);
@@ -11,6 +12,12 @@ const MainContent = () => {
     handleResize();
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/ItemPage'); // ItemPage로 이동
+  };
+
 
   return (
     <main className="main-content">
@@ -36,7 +43,7 @@ const MainContent = () => {
               <p>{section.text3}</p>
               <p>{section.text4}</p>
             </div>
-            <button>서비스 자세히 보기　〉</button>
+            <button onClick={handleClick}>서비스 자세히 보기　〉</button>
           </div>
         </section>
       ))}
