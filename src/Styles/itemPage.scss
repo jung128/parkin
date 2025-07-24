@@ -3,7 +3,7 @@
 .top-item {
     img {
         margin-bottom: 5rem auto;
-        width: 100%;
+        width: 90%;
         height: auto;
     }
 
@@ -11,13 +11,14 @@
 
     h1 {
         color: var(--color-main);
-        margin: 3rem auto;
+        margin: 2rem auto;
         @include main-big;
+        font-size: 2.5rem;
     }
 
     p {
         text-align: center;
-        margin-bottom: 5rem;
+        margin-bottom: 2rem;
         @include sub-basic;
         font-weight: bolder;
     }
@@ -26,11 +27,13 @@
 //설명 부분 목록
 .item-list {
     display: flex;
+    height: 100px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
     width: 100%;
+    margin-top: 100px;
             position: sticky;
     top: 0;
     background-color: #fef8f4;
@@ -38,7 +41,7 @@
     h3 {
         color: var(--color-main);
         @include main-large;
-        margin: 3rem auto;
+        margin: 0 auto;
     }
 
     //클릭 시 위치 이동값 개인적 으로 위치 맞춰지게 추가 필수
@@ -56,7 +59,7 @@
             padding: 0.5rem 1.5rem;
             cursor: pointer;
 
-            // 밑줄 호버처리 애니메이션
+            // 밑줄 호버처리 애니메이션 절대 수정 금지
             &::after {
                 content: "";
                 position: absolute;
@@ -97,6 +100,7 @@
         justify-content: center;
         align-items: center;
         gap: 3rem;
+
         img {
             max-width: 50%;
             height: 60%;
@@ -126,7 +130,7 @@
         h3 {
             color: var(--color-main);
             @include main-large;
-            margin: 3rem auto;
+            margin: 0 auto;
         }
 
         //클릭 시 위치 이동값 개인적 으로 위치 맞춰지게 추가 필수
@@ -209,7 +213,7 @@
         h3 {
             color: var(--color-main);
             @include main-large;
-            margin: 3rem auto;
+            margin: 1rem auto;
         }
 
         //클릭 시 위치 이동값 개인적 으로 위치 맞춰지게 추가 필수
@@ -245,5 +249,24 @@
             }
         }
     }
+    }
+}
+.contents{
+    .item-content{
+        h3{
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        p,li{
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        img{
+            display: block;
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom: 1rem;
+        }
+    
     }
 }
