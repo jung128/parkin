@@ -1,0 +1,98 @@
+.header{
+  .menu-wrap{
+    @include  sub-basic;    
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    align-items: center;
+    padding: 1rem 0.5rem;
+  }
+
+  position: relative;
+  .logo{
+    img{
+      width: 100px;
+    }
+  }
+}
+.mobile-menu{    
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  padding: 1rem;
+  width: 250px;
+  height: 50vh;
+  ul.nav-list{    
+    margin-top: 2rem;    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transform: tr;
+  }
+  .close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0 10px;
+  }
+
+}  
+.desktop-menu{
+  flex: 1;
+  ul.nav-list{
+    
+    display: flex;  
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem; 
+    li{
+      position: relative;
+      .submenu{
+        width: 150px;
+        position: absolute;
+        z-index: 110;
+        top: 80%;
+        left: 0;
+        display: none;
+        margin-top: 10px;
+        padding: 1rem;
+        background-color: #fff;  
+        border-radius: 10px;      
+        li{
+          padding: 10px 0;          
+        }  
+      }      
+      &.open .submenu{
+          display: block;
+          z-index: 111;
+        }
+    }
+
+  }
+}
+
+.nav-list{
+  @include main-basic;
+  li{
+    cursor: pointer;
+  }
+  button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 1rem;
+  }
+}
+.video-wrap{
+  position: relative;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  video{
+    object-fit: cover;
+  }  
+}
