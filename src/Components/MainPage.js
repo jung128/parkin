@@ -13,18 +13,10 @@ import ItemPageFive from "./ItemPageFive";
 const MainPage = () => {
     return (
         <div>
-
             <Header />
             <Followbanner />
             <Banner />
             <ContentsList />
-                <Routes>
-                    <Route path="/itempage" element={<ItemPage/>} />
-                    <Route path="/itempagtwo" element={<ItemPageTwo/>} />
-                    <Route path="/itempagthree" element={<ItemPageThree/>} />
-                    <Route path="/itempagfour" element={<ItemPageFour/>} />
-                    <Route path="/itempagefive" element={<ItemPageFive/>} />
-                </Routes>
             <Followbanner />
             <Footer />
 

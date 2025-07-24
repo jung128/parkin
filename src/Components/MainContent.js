@@ -22,7 +22,7 @@ const MainContent = () => {
 
   const handleClick = (idx) => {
     if( idx === 0 ){
-      navigate('/ItemPage'); // ItemPage로 이동
+      navigate('/itempage'); // ItemPage로 이동
     }if(idx===1){
       navigate('/itempagtwo');
     }if(idx ===2){
