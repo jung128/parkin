@@ -19,8 +19,6 @@ const MainPage = () => {
             <ContentsList />
             <Followbanner />
             <Footer />
-
-
         </div>
     );
 };
