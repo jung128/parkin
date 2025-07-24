@@ -9,11 +9,7 @@
     @content;
   }
 }
-@mixin mobile {
-  @media screen and (max-width: 412px) {
-    @content;
-  }
-}
+
 //모바일 사이즈 줄였어요 (수진)
 
 //컴포넌트

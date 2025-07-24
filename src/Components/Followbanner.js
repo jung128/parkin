@@ -9,20 +9,23 @@ import { useState } from "react";
 const Followbanner = () => {
   const [isVisible, setIsVisible] = useState(true);
 
+  // TOP 버튼 클릭 시 부드럽게 스크롤
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  if (!isVisible) return null; // 닫기 누르면 둘 다 사라짐
+  if (!isVisible) return null;
 
   return (
     <>
-      {/* 닫기 버튼 */}
-      <button className="floating-close-btn" onClick={() => setIsVisible(false)}>
+      {/* X 버튼 */}
+      <button
+        className="floating-close-btn"
+        onClick={() => setIsVisible(false)}
+      >
         <IoClose />
       </button>
 
-      {/* 배너 */}
       <div className="follow-banner">
         <div className="banner-item orange">
           <TbParkingCircleFilled className="icon" />
