@@ -13,7 +13,7 @@ const Banner = () => {
     "/image/images/membership.png",
     "/image/images/CCTV.png",
     "/image/images/cupon.png",
-    "/image/images/navi.png",
+    "/image/images/navi.png"
   ];
 
   // 슬라이드 복제 - 무한 루프 효과를 위해
