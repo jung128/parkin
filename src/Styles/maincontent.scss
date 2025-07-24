@@ -81,24 +81,7 @@
     button {
       @include move-btn-style();
       font-size: $font-regular;
-      width: 150px;
+      width: 200px;
     }
   }
 }
-
-/*
-    transition: all 0.5s;
-    @include tablet {
-    }
-    @include desktop {
-    }
-
-    transition: all 0.5s;
-    @include tablet {
-      @include main-large;
-    }
-    @include desktop {
-      @include main-big;
-      font-weight: 500;
-    }
-*/

@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import keywordData from "../assets/keywords.json";
-import { gsap } from "gsap";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -29,12 +29,13 @@ useEffect(() => {
       {
         opacity: 1,
         y: 0,
-        duration: 0.8,
+        duration: 0.5,
         ease: "power2.out",
         scrollTrigger: {
           trigger: el,
-          start: "top 80%", 
-          toggleActions: "play none none none",
+          start: "top 80%",
+          end: "bottom center",
+          toggleActions: "play none none reverse",
         },
       }
     );
