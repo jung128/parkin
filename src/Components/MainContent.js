@@ -24,14 +24,14 @@ const MainContent = () => {
     if( idx === 0 ){
       navigate('/ItemPage'); // ItemPage로 이동
     }if(idx===1){
-      navigate('itempagtwo');
+      navigate('/itempagtwo');
     }if(idx ===2){
-      navigate('itempagthree');
+      navigate('/itempagthree');
     }if(idx === 3){
-      navigate('itempagfour');
+      navigate('/itempagfour');
     }
     if(idx === 4){
-      navigate('itempagefive');
+      navigate('/itempagefive');
     }
   };
 

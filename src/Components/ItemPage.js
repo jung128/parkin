@@ -11,7 +11,7 @@ const ItemPage = () => {
             <Header/>
             <div className="top-item">
                 {/* 이미지도 기능페이지에 맞게 개인적으로 수정해서 사용 하시면 됩니다! */}
-                <img src="../image/images/save_desk.jpg" alt="메인 이미지" className="shrink" />
+                <img src="../image/images/save.png" alt="메인 이미지" className="shrink" />
                 <div className="top-text">
                     <h1>개인 주차장 공유 <br/>(기능 내용 개인적 수정)</h1>
                     <p>내 주차장, 이제는 공유하세요!<br />
