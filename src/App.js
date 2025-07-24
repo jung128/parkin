@@ -17,7 +17,7 @@ const App = () => {
           <Route path="/itempagtwo" element={<ItemPageTwo/>}/>
           <Route path="/itempagthree" element={<ItemPageThree/>}/>
           <Route path="/itempagfour" element={<ItemPageFour/>}/>
-          <Route path="/itempagfive" element={<ItemPageFive/>}/>
+          <Route path="/itempagefive" element={<ItemPageFive/>}/>
         </Routes>
       </BrowserRouter>
     </div>
