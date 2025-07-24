@@ -1,8 +1,14 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import keywordData from "../assets/keywords.json";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const MainContent = () => {
   const [isTablet, setIsTablet] = useState(window.innerWidth >= 768);
+  const sectionsRef = useRef([]);
+
   useEffect(() => {
     const handleResize = () => {
       setIsTablet(window.innerWidth >= 768);
@@ -12,10 +18,37 @@ const MainContent = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+useEffect(() => {
+  sectionsRef.current.forEach((el) => {
+    gsap.fromTo(
+      el,
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 80%", 
+          toggleActions: "play none none none",
+        },
+      }
+    );
+  });
+}, []);
+
   return (
     <main className="main-content">
-      {keywordData.map((section) => (
-        <section className="main-map" key={section.id}>
+      {keywordData.map((section, idx) => (
+        <section
+          className="main-map"
+          key={section.id}
+          ref={(el) => (sectionsRef.current[idx] = el)}
+        >
           <img
             src={
               isTablet
