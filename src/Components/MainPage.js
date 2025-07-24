@@ -8,6 +8,7 @@ import ItemPage from "./ItemPage";
 const MainPage = () => {
     return (
         <div>
+            <Header/>
             <Followbanner/>
             <Header/>
             <ItemPage />

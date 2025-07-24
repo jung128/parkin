@@ -6,10 +6,13 @@ import Header from "./Header";
 const ItemPage = () => {
     return (
         <div>
+
+            {/* .주차장 실시간 빈자리 확인 - 지원 */}
+            <Header/>
             <div className="top-item">
 
                 {/* 이미지도 기능페이지에 맞게 개인적으로 수정해서 사용 하시면 됩니다! */}
-                <img src="/image/images/jungimg/cctvimg.jpg" alt="메인 이미지" className="shrink" />
+                <img src="../image/images/save_desk.jpg" alt="메인 이미지" className="shrink" />
                 <div className="top-text">
                     <h1>안전을 위한 cctv </h1>
                     <p>주차장 상황, 실시간으로 확인하세요<br />
@@ -72,6 +75,7 @@ const ItemPage = () => {
                     <img />
                 </div>
             </div>
+            <Footer/>
         </div>
     );
 };

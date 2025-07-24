@@ -3,8 +3,17 @@
     display: none; // 모바일에서 숨김
   }
 
+  @include mobile {
+    display: none; // 모바일에서 숨김
+  }
+
   @include tablet {
     display: block;
+    position: fixed;
+    bottom: 15px; // 하단에서 띄움
+    right: 15px;  // 오른쪽에서 띄움
+    width: 200px;
+    border-radius: 15px 0 0 0;
     position: fixed;
     bottom: 15px; // 하단에서 띄움
     right: 15px;  // 오른쪽에서 띄움
@@ -15,21 +24,28 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     background-color: var(--color-white);
+    background-color: var(--color-white);
   }
+
 
   .banner-item {
     display: flex;
     flex-direction: column;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 10px 0;
     padding: 10px 0;
     cursor: pointer;
     border-bottom: 1px solid var(--color-dark-gray);
     width: 100%;
     height: 70px;
+    height: 70px;
     text-align: center;
 
     .icon {
+      font-size: 20px;
+      margin-bottom: 5px;
       font-size: 20px;
       margin-bottom: 5px;
       color: var(--color-main-font);
@@ -37,6 +53,7 @@
 
     .text {
       @include sub-basic;
+      color: var(--color-main-font);
       color: var(--color-main-font);
     }
 
@@ -57,8 +74,36 @@
       transform: scale(1.05);
 
       .icon, .text {
+      .icon, .text {
         color: var(--color-white);
       }
+    }
+  }
+}
+
+.floating-close-btn {
+  @include tablet {
+    position: fixed;
+    bottom: 370px;
+    right: 96px;
+    background-color: var(--color-dark-gray);
+    color: var(--color-white);
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background-color: var(--color-btn-hover);
+      transform: scale(1.1);
     }
   }
 }
