@@ -5,7 +5,12 @@
   overflow: hidden;
   margin: 0 auto;
   border: none;
-
+  display: inline;
+  height: 201px;
+  @include tablet{
+    display: inline;
+    height: 100px;
+  }
   .slider-wrapper {
     display: flex;
     transition: transform 0.4s ease-in-out;
@@ -13,7 +18,9 @@
 
   .slide {
     flex-shrink: 0;
-
+    @include tablet{
+      height: 125px;
+    }
     img {
       width: 100%;
       height: auto;
@@ -23,7 +30,7 @@
 
   .nav-arrow {
     position: absolute;
-    top: 37.5%;
+    top: 47.5%;
     transform: translateY(-50%);
     font-size: 50px;
     color: #111;
@@ -33,7 +40,7 @@
     cursor: pointer;
     background-color: rgba(0,0,0,0);
     @include tablet{
-        top: 20%;
+        top: 45%;
     }
 
     &.prev { left: -5px; }
