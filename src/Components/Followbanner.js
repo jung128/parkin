@@ -7,46 +7,46 @@ import { IoClose } from "react-icons/io5";
 import { useState } from "react";
 
 const Followbanner = () => {
-  const [isVisible, setIsVisible] = useState(true);
+    const [isVisible, setIsVisible] = useState(true);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+    // TOP 버튼 클릭 시 부드럽게 스크롤
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
 
-  if (!isVisible) return null; // 닫기 누르면 둘 다 사라짐
+    if (!isVisible) return null;
 
-  return (
-    <>
-      {/* 닫기 버튼 */}
-      <button className="floating-close-btn" onClick={() => setIsVisible(false)}>
-        <IoClose />
-      </button>
+    return (
+        <>
+            {/* X 버튼 */}
+            <button className="floating-close-btn" onClick={() => setIsVisible(false)}>
+                <IoClose />
+            </button>
 
-      {/* 배너 */}
-      <div className="follow-banner">
-        <div className="banner-item orange">
-          <TbParkingCircleFilled className="icon" />
-          <span className="text">빈자리 확인</span>
-        </div>
-        <div className="banner-item orange">
-          <FaCarOn className="icon" />
-          <span className="text">주차 예약</span>
-        </div>
-        <div className="banner-item yellow">
-          <IoTicketSharp className="icon" />
-          <span className="text">일일권 / 정기권</span>
-        </div>
-        <div className="banner-item yellow">
-          <BsPersonBadge className="icon" />
-          <span className="text">멤버십 가입</span>
-        </div>
-        <div className="banner-item yellow top-btn" onClick={scrollToTop}>
-          <MdOutlineKeyboardArrowUp className="icon" />
-          <span className="text">TOP</span>
-        </div>
-      </div>
-    </>
-  );
+            <div className="follow-banner">
+                <div className="banner-item orange">
+                    <TbParkingCircleFilled className="icon" />
+                    <span className="text">빈자리 확인</span>
+                </div>
+                <div className="banner-item orange">
+                    <FaCarOn className="icon" />
+                    <span className="text">주차 예약</span>
+                </div>
+                <div className="banner-item yellow">
+                    <IoTicketSharp className="icon" />
+                    <span className="text">일일권 / 정기권</span>
+                </div>
+                <div className="banner-item yellow">
+                    <BsPersonBadge className="icon" />
+                    <span className="text">멤버십 가입</span>
+                </div>
+                <div className="banner-item yellow top-btn" onClick={scrollToTop}>
+                    <MdOutlineKeyboardArrowUp className="icon" />
+                    <span className="text">TOP</span>
+                </div>
+            </div>
+        </>
+    );
 };
 
 export default Followbanner;

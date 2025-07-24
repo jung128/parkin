@@ -15,7 +15,6 @@ const MainPage = () => {
             <Banner/>
             <ContentsList/>
             <Footer/>
-            <ItemPageFour/>
         </div>
     );
 };
