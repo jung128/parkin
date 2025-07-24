@@ -4,7 +4,7 @@ import Header from "./Header";
 const ItemPageThree = () => {
     return (
         <div>
-            {/* .스마트 예약 - 표지우 */}
+            {/* .정기권 및 멤버십 혜택 (정수진) */}
             <Header/>
             <div className="top-item">
 
