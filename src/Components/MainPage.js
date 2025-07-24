@@ -1,4 +1,3 @@
-import { BrowserRouter } from "react-router-dom";
 import Banner from "./Banner";
 import ContentsList from "./ContentsList";
 import Followbanner from "./Followbanner";
