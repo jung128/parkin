@@ -2,38 +2,38 @@
   {
     "id": 1,
     "img": {
-      "mobile": "/image/images/navimobile.jpg",
-      "tablet": "/image/images/navi.jpg",
-      "alt": "CCTV"
+      "mobile": "/image/images/navimobile.png",
+      "tablet": "/image/images/navi.png",
+      "alt": "주차장 빈자리 확인 이미지"
     },
     "title": "이제 빙빙 돌 필요 없어요.",
     "sub": "앱에서 ",
     "sub2": "바로 확인 가능!",
     "text1": "위치기반 주변 주차장 안내 제공",
-    "text2": "사용하던 내비게이션 앱과 연동하여 받는 길 안내",
+    "text2": "실시간 주차 현황 확인",
     "text3": "전기차 · 경차 · 장애인 · 임산부 등 우선 주차 구역 안내"
   },
   {
     "id": 2,
     "img": {
-      "mobile": "/image/images/mainmobile.jpg",
-      "tablet": "/image/images/main.jpg",
-      "alt": "CCTV"
+      "mobile": "/image/images/mainmobile.png",
+      "tablet": "/image/images/main.png",
+      "alt": "주차 예약 및 결제 이미지"
     },
     "title": "도착했을 때 ",
     "sub": "자리 없을 ",
     "sub2": "걱정 끝!",
-    "text1": "출발 전, 예상 도착 시간에 주차를 할 수 있는 예약 시스템",
-    "text2": "실시간으로 앱 내 지도를 통해 빈 주차 공간을 한눈에 확인",
-    "text3": "어플 및 사이트에서 주차 요금 결제", 
-    "text4": "차량 번호판 자동인식으로 자동 결제"
+    "text1": "출발 전, 예상 도착 시간에 주차 가능한 예약 시스템",
+    "text2": "어플 및 사이트에서 주차 요금 결제",
+    "text3": "차량 번호판 자동인식으로 자동 결제",
+    "text4": ""
   },
   {
     "id": 3,
     "img": {
-      "mobile": "/image/images/membershipmobile.jpg",
-      "tablet": "/image/images/membership.jpg",
-      "alt": "CCTV"
+      "mobile": "/image/images/cuponmobile.png",
+      "tablet": "/image/images/cupon.png",
+      "alt": "정기권 및 멤버쉽 혜택 이미지"
     },
     "title": "주차도 하고, 쇼핑도 하고 ",
     "sub2": "뭘 해도 이득!",
@@ -44,9 +44,9 @@
   {
     "id": 4,
     "img": {
-      "mobile": "/image/images/CCTVmobile.jpg",
-      "tablet": "/image/images/CCTV.jpg",
-      "alt": "CCTV"
+      "mobile": "/image/images/CCTVmobile.png",
+      "tablet": "/image/images/CCTV.png",
+      "alt": "CCTV 이미지"
     },
     "title": "차는 주차장에 있지만, ",
     "sub2": "마음은 안심하세요",
@@ -57,9 +57,9 @@
   {
     "id": 5,
     "img": {
-      "mobile": "/image/images/savemobile.jpg",
-      "tablet": "/image/images/save.jpg",
-      "alt": "CCTV"
+      "mobile": "/image/images/savemobile.png",
+      "tablet": "/image/images/save.png",
+      "alt": "주차자리 공유 안내 이미지"
     },
     "title": "출근 뒤 비어있는 내 주차자리로 ",
     "sub2": "돈을 벌자",
