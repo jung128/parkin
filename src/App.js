@@ -12,7 +12,7 @@ const App = () => {
       <Followbanner />
       <Header />
       <ItemPage/>
-      {/* <Header />
+      <Header />
       <Banner />
       <ContentsList />
       <ItemPage/>

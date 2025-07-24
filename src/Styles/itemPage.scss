@@ -72,6 +72,11 @@
             &:hover::after {
                 width: 100%;
             }
+            button{
+                border: none;
+                outline: none;
+                background-color: var(--color-bg);
+            }
         }
     }
 }
