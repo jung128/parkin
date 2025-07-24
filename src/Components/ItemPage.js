@@ -32,6 +32,9 @@ const ItemPage = () => {
                     <li>리뷰(기능 내용 개인적 수정)</li>
                 </ul>
             </div>
+
+
+            {/* 여기 부분은 삭제 하신 후 개인 적으로 폼 만들어 주시면 됩니다 */}
             <div className="contents">
                 <div className="item-content">
                     <h3></h3>
