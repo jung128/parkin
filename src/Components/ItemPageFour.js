@@ -8,6 +8,9 @@ import Header from "./Header";
 gsap.registerPlugin(ScrollTrigger);
 
 const ItemPageFour = () => {
+        useEffect(() => {
+    window.scrollTo(0, 0);
+    }, []);
     useEffect(() => {
         // DOM이 완전히 로드된 후 애니메이션 실행
         const timer = setTimeout(() => {

@@ -4,9 +4,13 @@ import { TbParkingCircleFilled } from "react-icons/tb";
 import { IoCar } from "react-icons/io5";
 import { TbDisabled } from "react-icons/tb";
 import { MdPregnantWoman } from "react-icons/md";
+import { useEffect } from "react";
 
 // 위치값 혹은 개인 기능 페이지 애니메이션 효과는 react혹은 css로 선택하여 진행해 주시면 됩니다
 const ItemPage = () => {
+        useEffect(() => {
+        window.scrollTo(0, 0);
+        }, []);
     return (
         <div>
 

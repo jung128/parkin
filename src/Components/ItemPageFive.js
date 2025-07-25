@@ -28,7 +28,7 @@ const ItemPageFive = () => {
             text2:
                 "당신이 비워두는 그 시간, \n누군가는 주차 공간이 절실합니다. \n  P'in 은 개인 주차장을 \n 시간 단위로 직접 공유할 수 있습니다.",
             text3: "간편 등록 \n\n ↓ \n\n시간 설정 \n\n ↓ \n\n수익 정산까지! \n \n몇 번의 터치면 끝!",
-            text4: "지금 바로 나의 주차공간 공유를 시작해보세요.",
+            text4: "지금 바로 나의 주차공간 공유를 시작해보세요!",
         },
         {
             title: "이런 분들께 꼭 필요해요!",
@@ -68,6 +68,7 @@ const ItemPageFive = () => {
     ];
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         const sections = containerRef.current.querySelectorAll(".item-content");
         console.log(sections);
 
@@ -118,7 +119,8 @@ const ItemPageFive = () => {
             <div className="item-list">
                 <h3>상세 설명</h3>
                 <ul>
-                    <li><button onClick={() => scrollToSection(0,1)}>내 주차장 공유</button></li>
+                    <li><button onClick={() => scrollToSection(0)}>내 주차장 공유</button></li>
+                    <li><button onClick={() => scrollToSection(1)}>이용자 타겟</button></li>
                     <li><button onClick={() => scrollToSection(2)}>주차장 등록</button></li>
                     <li><button onClick={() => scrollToSection(3)}>주차장 이용</button></li>
                     <li><button onClick={() => scrollToSection(4)}>리뷰</button></li>

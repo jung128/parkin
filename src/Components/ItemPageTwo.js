@@ -1,7 +1,11 @@
+import { useEffect } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 
 const ItemPageTwo = () => {
+    useEffect(() => {
+    window.scrollTo(0, 0);
+    }, []);
     return (
         <div>
                         {/* .스마트 예약 - 표지우 */}
