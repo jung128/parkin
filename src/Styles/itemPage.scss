@@ -160,7 +160,9 @@
                 background-color: var(--color-main);
                 transition: width 0.3s ease;
             }
-
+                button{
+                    @include sub-medium;
+                }
             &:hover::after {
                 width: 100%;
             }
@@ -243,6 +245,9 @@
                 background-color: var(--color-main);
                 transition: width 0.3s ease;
             }
+            button{
+                    @include sub-medium;
+                }
 
             &:hover::after {
                 width: 100%;

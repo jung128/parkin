@@ -15,6 +15,11 @@ const ItemPageFive = () => {
                 <br />
             </span>
         ));
+    const sectionRefs = useRef([]);
+
+    const scrollToSection = (index) => {
+        sectionRefs.current[index]?.scrollIntoView({ behavior: "smooth" });
+    };
     const contentItems = [
         {
             title: "개인 주차공간 공유해서 용돈 벌자!",
@@ -22,7 +27,7 @@ const ItemPageFive = () => {
             image: "/image/images/save.png",
             text2:
                 "당신이 비워두는 그 시간, \n누군가는 주차 공간이 절실합니다. \n  P'in 은 개인 주차장을 \n 시간 단위로 직접 공유할 수 있습니다.",
-            text3: "간편 등록 → 시간 설정 → 수익 정산까지, 몇 번의 터치면 끝!",
+            text3: "간편 등록 \n\n ↓ \n\n시간 설정 \n\n ↓ \n\n수익 정산까지! \n \n몇 번의 터치면 끝!",
             text4: "지금 바로 나의 주차공간 공유를 시작해보세요.",
         },
         {
@@ -113,10 +118,10 @@ const ItemPageFive = () => {
             <div className="item-list">
                 <h3>상세 설명</h3>
                 <ul>
-                    <li><button>내 주차장 공유</button></li>
-                    <li><button>주차장 등록</button></li>
-                    <li><button>주차장 이용</button></li>
-                    <li><button>리뷰</button></li>
+                    <li><button onClick={() => scrollToSection(0,1)}>내 주차장 공유</button></li>
+                    <li><button onClick={() => scrollToSection(2)}>주차장 등록</button></li>
+                    <li><button onClick={() => scrollToSection(3)}>주차장 이용</button></li>
+                    <li><button onClick={() => scrollToSection(4)}>리뷰</button></li>
                 </ul>
             </div>
 
@@ -124,13 +129,16 @@ const ItemPageFive = () => {
             {/* 여기 부분은 삭제 하신 후 개인 적으로 폼 만들어 주시면 됩니다 */}
             <div id="contents" ref={containerRef}>
                 {contentItems.map((item, idx) => (
-                    <section className="item-content" key={idx}>
+                    <section 
+                            className="item-content" 
+                            key={idx}
+                            ref={(el) => (sectionRefs.current[idx] = el)}>
                         <img src={item.image} alt={`이미지 ${idx + 1}`} />
                         <h3>{item.title}</h3>
-                        <p><TextWithBreaks text={item.text1} /></p>
-                        <p><TextWithBreaks text={item.text2} /></p>
-                        <p><TextWithBreaks text={item.text3} /></p>
-                        <p><TextWithBreaks text={item.text4} /></p>
+                        <p className="text-1"><TextWithBreaks text={item.text1} /></p>
+                        <p className="text-2"><TextWithBreaks text={item.text2} /></p>
+                        <p className="text-3"><TextWithBreaks text={item.text3} /></p>
+                        <p className="text-4"><TextWithBreaks text={item.text4} /></p>
                     </section>
                 ))}
             </div>
