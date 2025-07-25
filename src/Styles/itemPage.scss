@@ -49,36 +49,57 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 2rem auto;
-    margin-bottom: 5rem;
-    border-bottom: 1px solid var(--color-main-font);
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    margin-top: 100px;
+            position: sticky;
+    top: 0;
+    background-color: #fef8f4;
+    z-index: 999;
+    h3 {
+        color: var(--color-main);
+        @include main-large;
+        margin: 0 auto;
+    }
 
-    li {
-      position: relative;
-      padding: 0.5rem 1.5rem;
-      cursor: pointer;
+    //클릭 시 위치 이동값 개인적 으로 위치 맞춰지게 추가 필수
+    ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 2rem auto;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid var(--color-main-font);
 
-      // 밑줄 호버처리 애니메이션 절대 수정 금지
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 0;
-        height: 2px;
-        background-color: var(--color-main);
-        transition: width 0.3s ease;
-      }
 
-      &:hover::after {
-        width: 100%;
-      }
-      button {
-        border: none;
-        outline: none;
-        background-color: var(--color-bg);
-      }
+        li {
+            position: relative;
+            padding: 0.5rem 1.5rem;
+            cursor: pointer;
+
+            // 밑줄 호버처리 애니메이션 절대 수정 금지
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0;
+                height: 2px;
+                background-color: var(--color-main);
+                transition: width 0.3s ease;
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+            button{
+                border: none;
+                outline: none;
+                background-color: var(--color-bg);
+            }
+        }
     }
   }
 }
@@ -132,34 +153,38 @@
 
     //클릭 시 위치 이동값 개인적 으로 위치 맞춰지게 추가 필수
     ul {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      margin: 2rem auto;
-      margin-bottom: 5rem;
-      border-bottom: 1px solid var(--color-main-font);
-      width: 95%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 2rem auto;
+        margin-bottom: 5rem;
+        border-bottom: 1px solid var(--color-main-font);
+                width: 95%;
 
-      li {
-        position: relative;
-        padding: 0.5rem 1.5rem;
-        cursor: pointer;
+        li {
+            position: relative;
+            padding: 0.5rem 1.5rem;
+            cursor: pointer;
 
-        // 밑줄 호버처리 애니메이션
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 0;
-          height: 2px;
-          background-color: var(--color-main);
-          transition: width 0.3s ease;
-        }
+            // 밑줄 호버처리 애니메이션
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0;
+                height: 2px;
+                background-color: var(--color-main);
+                transition: width 0.3s ease;
+            }
+                button{
+                    @include sub-medium;
+                }
+            &:hover::after {
+                width: 100%;
+            }
 
-        &:hover::after {
-          width: 100%;
         }
       }
     }
@@ -213,32 +238,34 @@
 
     //클릭 시 위치 이동값 개인적 으로 위치 맞춰지게 추가 필수
     ul {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      margin: 2rem auto;
-      margin-bottom: 5rem;
-      border-bottom: 1px solid var(--color-main-font);
-      width: 95%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 2rem auto;
+        margin-bottom: 5rem;
+        border-bottom: 1px solid var(--color-main-font);
+                width: 95%;
 
-      li {
-        position: relative;
-        padding: 0.5rem 1.5rem;
-        cursor: pointer;
+        li {
+            position: relative;
+            padding: 0.5rem 1.5rem;
+            cursor: pointer;
 
-        // 밑줄 호버처리 애니메이션
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 0;
-          height: 2px;
-          background-color: var(--color-main);
-          transition: width 0.3s ease;
-        }
-
+            // 밑줄 호버처리 애니메이션
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0;
+                height: 2px;
+                background-color: var(--color-main);
+                transition: width 0.3s ease;
+            }
+            button{
+                    @include sub-medium;
+                }
         &:hover::after {
           width: 100%;
         }
