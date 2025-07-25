@@ -22,8 +22,6 @@
   cursor: pointer;
 }
 
-//임의로 추가한 것 (수진)
-
 @mixin move-btn-style($bg:var(--color-bg)) {
   color: var(--color-btn);
   background-color: $bg;

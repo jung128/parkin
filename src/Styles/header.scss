@@ -14,7 +14,7 @@
     img {
       margin-left: 1rem;
       width: 100px;
-      @include desktop {
+      @media screen and (min-width: 1300px) {
         margin-left: 2rem;
         width: 180px;
       }
@@ -70,7 +70,8 @@
     gap: 1rem;
     li {
       position: relative;
-      @include desktop {
+      font-size: 1rem;
+      @media screen and (min-width: 1300px) {
         font-size: 1.3rem;
       }
       .submenu {
@@ -154,7 +155,7 @@
     &:hover {
       color: var(--color-main);
     }
-    @include desktop {
+    @media screen and (min-width: 1300px) {
       font-size: 1.3rem;
     }
   }
