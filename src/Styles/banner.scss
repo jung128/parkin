@@ -80,7 +80,8 @@
 .text-container {
   position: relative;
   width: 100%;
-  margin: 0 auto;
+  margin: 1.5rem auto;
+  //간격이 너무 붙어있는게 답답해보여서 손좀 댔는데 별로시라면 0으로 가셔도 됩니다 (수진_이 메모는 병합때 꼭.. 지워주세요)
   border-top: 1px solid #222;
   @include main-basic;
 }
