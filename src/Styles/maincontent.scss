@@ -11,7 +11,7 @@
   @include tablet {
     gap: 3rem;
   }
-    @include desktop {
+  @include desktop {
     gap: 4rem;
   }
   .main-map {
@@ -38,15 +38,14 @@
         width: 370px;
       }
     }
-    
     @include desktop {
-      max-width: 1133px;
+      max-width: 1200px;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-around;
       img {
-        width: 420px;
+        width: 500px;
       }
     }
     .main-title {
@@ -60,15 +59,24 @@
     h2 {
       @include main-basic;
       font-size: $font-medium;
+      @include desktop {
+        font-size: $font-large;
+      }
     }
     h3 {
       @include main-large;
       font-size: 1.7rem;
+      @include desktop {
+        font-size: 2.2rem;
+      }
     }
     span {
       @include main-large;
       font-size: 1.7rem;
       color: var(--color-point);
+      @include desktop {
+        font-size: 2.2rem;
+      }
     }
     .main-text {
       display: flex;
@@ -76,12 +84,19 @@
       gap: 0.2rem;
       p {
         font-size: 0.9rem;
+        @include desktop {
+          font-size: $font-medium;
+        }
       }
     }
     button {
       @include move-btn-style();
       font-size: $font-regular;
       width: 200px;
+      @include desktop {
+        font-size: $font-basic;
+        width: 230px;
+      }
     }
   }
 }

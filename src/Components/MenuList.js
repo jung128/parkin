@@ -34,9 +34,6 @@ const MenuList = ({device}) => {
       <li>제휴 / 협력</li>
       <li>이용약관</li>
       <li>블로그</li>
-      {
-        device && <li>브랜드 리소스</li>
-      }      
       <li>고객지원</li>
     </ul>
   );

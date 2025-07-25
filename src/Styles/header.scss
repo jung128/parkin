@@ -37,30 +37,28 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
   z-index: 999;
-
   display: flex;
   justify-content: flex-end;
-}
-.mobile-menu {
-  z-index: 100;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: var(--color-bg);
-  padding: 1rem;
-  width: 250px;
-  height: 50vh;
-
-  ul.nav-list {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  .close-btn {
+  .mobile-menu {
+    z-index: 100;
     position: absolute;
-    top: 18px;
-    right: 8px;
+    top: 0;
+    right: 0;
+    background-color: var(--color-bg);
+    padding: 1rem;
+    width: 250px;
+    height: 50vh;
+    ul.nav-list {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .close-btn {
+      position: absolute;
+      top: 18px;
+      right: 8px;
+    }
   }
 }
 .desktop-menu {
@@ -76,7 +74,6 @@
         font-size: 1.3rem;
       }
       .submenu {
-        width: 150px;
         position: absolute;
         z-index: 110;
         top: 80%;
@@ -87,8 +84,15 @@
         padding: 1rem;
         background-color: var(--color-bg);
         border-radius: 10px;
-        li {
-          padding: 10px 0;
+        @media screen and (min-width: 1024px) {
+          margin-top: 1rem;
+          min-width: 150px;
+          li {
+            padding: 0.5rem;
+          }
+        }
+        @include desktop {
+          min-width: 160px;
         }
       }
       &.open .submenu {
@@ -105,17 +109,41 @@
   @media screen and (min-width: 1024px) {
     padding: 0;
   }
+  .submenu {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    li {
+      animation: fadeInUp 0.4s ease forwards;
+      &:nth-child(1) {
+        margin-top: 0.5rem;
+        animation-delay: 0.1s;
+        @media screen and (min-width: 1024px) {
+          margin-top: 0;
+        }
+      }
+      &:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+    }
+  }
   li {
     cursor: pointer;
     text-align: right;
     padding: 0.5rem;
     border-radius: 0.5rem;
-    &:hover {
-      background-color: var(--color-main);
-    }
     @media screen and (min-width: 1024px) {
       text-align: center;
     }
+  }
+  li:nth-child(n + 3):hover {
+    color: var(--color-main);
   }
   button {
     background-color: transparent;
@@ -123,18 +151,41 @@
     outline: none;
     font-family: inherit;
     font-size: 1rem;
+    &:hover {
+      color: var(--color-main);
+    }
     @include desktop {
       font-size: 1.3rem;
     }
   }
   .open {
     .submenu {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
       li {
         padding-top: 0.5rem;
+        opacity: 0;
+        transform: translateY(10px);
+        &:hover {
+          color: var(--color-main);
+        }
       }
     }
   }
 }
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+//영상효과
 .video-wrap {
   position: relative;
   z-index: 9;
