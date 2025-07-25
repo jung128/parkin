@@ -3,7 +3,7 @@ import { useState } from 'react';
 const MenuList = ({device}) => {
   const [isServiceOpen, setServiceOpen] = useState(false);
   const [isAppOpen, setAppOpen] = useState(false);
-
+  
   return (
     <ul className="nav-list">
       <li className={isServiceOpen ? 'open' : ''}>
