@@ -1,31 +1,37 @@
 //상단 이미지 및 기능 제목, 간단내용
 
-.top-item {
-  img {
-    margin-bottom: 5rem auto;
-    width: 90%;
-    height: auto;
-  }
-
+.three-item-header {
   text-align: center;
-
-  h1 {
-    color: var(--color-main);
-    margin: 2rem auto;
-    @include main-big;
-    font-size: 2.5rem;
-  }
-
-  p {
-    text-align: center;
+  img {
     margin-bottom: 2rem;
-    @include sub-basic;
-    font-weight: bolder;
+    width: 90%;
+  }
+  .header-text {
+    h1 {
+      color: var(--color-main);
+      margin: 3rem auto;
+      @include main-large;
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-family: "SBAggroB";
+      font-weight: 500;
+      font-size: $font-medium;
+      color: var(--color-point);
+      margin-bottom: 2rem;
+    }
+    p {
+      text-align: center;
+      margin-bottom: 2rem;
+      @include sub-basic;
+      font-weight: bolder;
+      line-height: 1.5;
+    }
   }
 }
 
 //설명 부분 목록
-.item-list {
+.three-item-list {
   display: flex;
   height: 100px;
   justify-content: center;
@@ -92,7 +98,7 @@
 
 @include tablet {
   //상단 이미지 및 기능 제목, 간단내용
-  .top-item {
+  .three-item-header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,22 +108,23 @@
       max-width: 50%;
       height: 60%;
     }
-
-    h1 {
-      color: var(--color-main);
-      margin: 3.5rem auto;
-      margin-top: 5rem;
-      @include main-large;
-    }
-    p {
-      text-align: center;
-      margin-bottom: 5rem;
-      @include sub-basic;
-      font-weight: bolder;
+    .header-text {
+      h1 {
+        color: var(--color-main);
+        margin: 3.5rem auto;
+        margin-top: 5rem;
+        @include main-large;
+      }
+      p {
+        text-align: center;
+        margin-bottom: 5rem;
+        @include sub-basic;
+        font-weight: bolder;
+      }
     }
   }
 
-  .item-list {
+  .three-item-list {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -175,7 +182,7 @@
 
 @include desktop {
   //상단 이미지 및 기능 제목, 간단내용
-  .top-item {
+  .three-item-header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -184,21 +191,22 @@
       max-width: 60%;
       height: 60%;
     }
-
-    h1 {
-      color: var(--color-main);
-      margin: 5rem auto;
-      @include main-large;
-    }
-    p {
-      text-align: center;
-      margin-bottom: 5rem;
-      @include sub-basic;
-      font-weight: bolder;
+    .header-text {
+      h1 {
+        color: var(--color-main);
+        margin: 5rem auto;
+        @include main-large;
+      }
+      p {
+        text-align: center;
+        margin-bottom: 5rem;
+        @include sub-basic;
+        font-weight: bolder;
+      }
     }
   }
 
-  .item-list {
+  .three-item-list {
     display: flex;
     justify-content: center;
     align-items: center;

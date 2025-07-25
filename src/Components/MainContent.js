@@ -21,44 +21,46 @@ const MainContent = () => {
   const navigate = useNavigate();
 
   const handleClick = (idx) => {
-    if( idx === 0 ){
-      navigate('/itempage'); // ItemPage로 이동
-    }if(idx===1){
-      navigate('/itempagtwo');
-    }if(idx ===2){
-      navigate('/itempagthree');
-    }if(idx === 3){
-      navigate('/itempagfour');
+    if (idx === 0) {
+      navigate("/itempage"); // ItemPage로 이동
     }
-    if(idx === 4){
-      navigate('/itempagefive');
+    if (idx === 1) {
+      navigate("/itempagtwo");
+    }
+    if (idx === 2) {
+      navigate("/itempagthree");
+    }
+    if (idx === 3) {
+      navigate("/itempagfour");
+    }
+    if (idx === 4) {
+      navigate("/itempagefive");
     }
   };
 
-
-useEffect(() => {
-  sectionsRef.current.forEach((el) => {
-    gsap.fromTo(
-      el,
-      {
-        opacity: 0,
-        y: 50,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.5,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 80%",
-          end: "bottom center",
-          toggleActions: "play none none reverse",
+  useEffect(() => {
+    sectionsRef.current.forEach((el) => {
+      gsap.fromTo(
+        el,
+        {
+          opacity: 0,
+          y: 50,
         },
-      }
-    );
-  });
-}, []);
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 90%",
+            end: "bottom center",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
+  }, []);
 
   return (
     <main className="main-content">
@@ -88,7 +90,13 @@ useEffect(() => {
               <p>{section.text3}</p>
               <p>{section.text4}</p>
             </div>
-            <button onClick={()=>{handleClick(idx)}}>서비스 자세히 보기　〉</button>
+            <button
+              onClick={() => {
+                handleClick(idx);
+              }}
+            >
+              서비스 자세히 보기　〉
+            </button>
           </div>
         </section>
       ))}
