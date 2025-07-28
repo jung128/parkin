@@ -17,7 +17,7 @@
       font-family: "SBAggroB";
       font-weight: 500;
       font-size: $font-medium;
-      color: var(--color-point);
+      color: var(--color-dark-gray);
       margin-bottom: 1rem;
     }
     p {
@@ -55,8 +55,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 2rem auto;
-    margin-bottom: 5rem;
+    margin: 2rem auto 5rem auto;
     border-bottom: 1px solid var(--color-main-font);
     width: 95%;
     li {
@@ -114,7 +113,6 @@
         font-family: "SBAggroB";
         font-weight: 500;
         font-size: 1.2rem;
-        color: var(--color-point);
         margin-bottom: 1rem;
       }
       p {
@@ -197,7 +195,6 @@
         font-family: "SBAggroB";
         font-weight: 500;
         font-size: 1.2rem;
-        color: var(--color-point);
         margin-bottom: 1rem;
       }
       p {
@@ -232,7 +229,6 @@
         font-family: "SBAggroB";
         font-weight: 500;
         font-size: $font-medium;
-        color: var(--color-point);
         margin-bottom: 1rem;
       }
       p {
@@ -295,23 +291,81 @@
     }
   }
 }
+
+//상세내용
 .page-three-contents {
-  .three-item-content {
-    h3 {
-      text-align: center;
-      margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 5rem;
+  margin: 5rem auto;
+  line-height: 1.7;
+  width: 100%;
+  height: auto;
+  @include desktop {
+    max-width: 1000px;
+    margin: 5rem auto;
+  }
+  section {
+    padding-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    .title-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .section-title {
+        font-family: "SBAggroB";
+        font-size: $font-large;
+        font-weight: $font-weight-light;
+        color: var(--color-btn);
+      }
+      .section-subtitle {
+        font-size: 1.5rem;
+        font-weight: $font-weight-bold;
+        background-color: var(--color-sub);
+        padding: 0 1rem;
+        color: var(--color-main-font);
+      }
+      h3{
+        margin: 1rem 0;
+      }
     }
-    p,
-    li {
-      text-align: center;
-      margin-bottom: 0.5rem;
+    div {
+      h2 {
+        color: var(--color-point);
+        font-size: $font-medium;
+        font-weight: 800;
+      }
+      p {
+        font-size: 1.25rem;
+      }
+    }
+    .content-text {
+      margin: 2rem 0;
+      p {
+        font-size: $font-medium;
+        font-weight: $font-weight-black;
+      }
     }
     img {
-      display: block;
       width: 90%;
-      margin: 0 auto;
-      margin-bottom: 1rem;
+      height: 100%;
+      margin: 5rem auto;
     }
+  }
+
+  .three-item-content1 {
+  }
+
+  .three-item-content4 {
     .buy-button {
       display: flex;
       justify-content: space-around;
