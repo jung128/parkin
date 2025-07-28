@@ -171,7 +171,7 @@ const ItemPageThree = () => {
             <strong>P’IN 정기권 & 멤버십</strong>으로 지금 바로 시작해보세요!
           </p>
 
-          <div className="buy-buttons">
+          <div className="buy-button">
             <button>정기권 구매하기</button>
             <button>멤버십 가입하기</button>
             <button>정기권 + 멤버십</button>
