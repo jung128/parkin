@@ -59,7 +59,7 @@ const Coupons = ({ onClose }) => {
         <div className="popup-overlay">
             <div className="coupon-popup">
                 <button className="close-btn" onClick={onClose}>×</button>
-                <h3>휴대폰 번호로 쿠폰 받기</h3>
+                <h3>휴대폰 번호로 <br/>쿠폰 받기</h3>
                 <p className="sub-text">휴대폰 번호를 입력하고 <br/>쿠폰을 발급받으세요.</p>
                 <form onSubmit={handleSubmit}>
                     <input
