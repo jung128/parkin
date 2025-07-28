@@ -14,8 +14,20 @@
     margin-top: 8rem;
 }
 
-.right-text{
-    display: none;
+.item-list{
+    h3{
+        @include main-large;
+        font-weight: 100;
+        color: var(--color-main);
+        @include tablet{
+            font-weight: 200;
+            @include main-large;
+        }
+        @include desktop{
+            font-weight: 500;
+            @include main-big;
+        }
+    }
 }
 
 #contents {
