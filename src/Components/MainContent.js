@@ -32,6 +32,7 @@ const MainContent = () => {
     }
     if (idx === 3) {
       navigate("/itempagfour");
+      window.scrollTo(0, 0);
     }
     if (idx === 4) {
       navigate("/itempagefive");

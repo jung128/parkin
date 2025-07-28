@@ -3,7 +3,6 @@ import ContentsList from "./ContentsList";
 import Followbanner from "./Followbanner";
 import Footer from "./Footer";
 import Header from "./Header";
-import ItemPageFour from "./ItemPageFour";
 
 const MainPage = () => {
     return (

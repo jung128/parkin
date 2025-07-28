@@ -20,9 +20,12 @@
   border: none;
   color: var(--color-sub-font);
   cursor: pointer;
+  &:hover {
+    background-color: var(--color-btn-hover);
+  }
 }
 
-@mixin move-btn-style($bg:var(--color-bg)) {
+@mixin move-btn-style($bg: var(--color-bg)) {
   color: var(--color-btn);
   background-color: $bg;
   padding: 0.5rem 1rem;
@@ -35,6 +38,6 @@
   &:hover {
     color: var(--color-btn-hover);
     border-color: var(--color-btn-hover);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   }
 }
-
