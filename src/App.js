@@ -6,6 +6,7 @@ import ItemPageTwo from "./Components/ItemPageTwo";
 import ItemPageThree from "./Components/ItemPageThree";
 import ItemPageFour from "./Components/ItemPageFour";
 import ItemPageFive from "./Components/ItemPageFive";
+import Coupons from "./Components/Coupons";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/itempagthree" element={<ItemPageThree />} />
           <Route path="/itempagfour" element={<ItemPageFour />} />
           <Route path="/itempagefive" element={<ItemPageFive />} />
+          <Route path="/coupons" element={<Coupons/>}/>
         </Routes>
       </BrowserRouter>
 
