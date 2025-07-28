@@ -362,14 +362,13 @@
     }
   }
 
-  .three-item-content1 {
-  }
-
   .three-item-content4 {
     .buy-button {
       display: flex;
       justify-content: space-around;
       align-items: center;
+      gap: 1rem;
+      margin-bottom: 5rem;
       button {
         @include btn-style();
         &:hover {
