@@ -81,6 +81,7 @@
       .color {
         display: flex;
         justify-content: space-between;
+        gap: 1rem;
         @include desktop{
           gap: 1rem;
         }

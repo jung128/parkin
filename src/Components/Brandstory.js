@@ -1,7 +1,11 @@
+import { useEffect } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 
 const Brandstory = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Header />
