@@ -48,6 +48,10 @@ const Brandstory = () => {
         <p>
           P’IN의 둥근 로고는 언제나 당신 곁에 있는 ‘안심의 공간’을 상징합니다
         </p>
+        <img
+          src={`${process.env.PUBLIC_URL}/image/logp/Logo-05.png`}
+          alt="로고 심볼 마크"
+        />
       </div>
     </div>
   );

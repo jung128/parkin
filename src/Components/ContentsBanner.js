@@ -1,5 +1,11 @@
+import { useNavigate } from "react-router-dom";
 
 const ContentsBanner = () => {
+  const navigate = useNavigate();
+  const handlestory = () => {
+    navigate("/brandstory");
+  };
+
   return (
     <div className="contents-banner">
       <div className="CBtxt">
@@ -10,7 +16,12 @@ const ContentsBanner = () => {
           고민 많은 당신을 위해 <br />
           기다림 없는 주차 서비스
         </p>
-        <button>P'in이 처음이신가요?　〉</button>
+        <button
+          onClick={
+            handlestory}
+        >
+          P'in이 처음이신가요?　〉
+        </button>
       </div>
       <div className="imgbox">
         <img

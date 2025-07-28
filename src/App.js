@@ -6,6 +6,7 @@ import ItemPageTwo from "./Components/ItemPageTwo";
 import ItemPageThree from "./Components/ItemPageThree";
 import ItemPageFour from "./Components/ItemPageFour";
 import ItemPageFive from "./Components/ItemPageFive";
+import Brandstory from "./Components/Brandstory";
 
 const App = () => {
   
@@ -14,6 +15,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainPage />} />
+          <Route path="/brandstory" element={<Brandstory />} />
           <Route path="/itempage" element={<ItemPage />} />
           <Route path="/itempagtwo" element={<ItemPageTwo />} />
           <Route path="/itempagthree" element={<ItemPageThree />} />
