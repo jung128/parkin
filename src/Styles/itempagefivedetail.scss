@@ -1,5 +1,21 @@
+@mixin tablet {
+    @media (min-width: 768px) and (max-width: 1023px) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width:1024px) {
+        @content;
+    }
+}
+
+
 .top-item {
     margin-top: 8rem;
+}
+
+.right-text{
+    display: none;
 }
 
 #contents {
@@ -30,6 +46,7 @@
             height: 100%;
             height: auto;
             margin: 0 auto;
+            box-shadow: 5px 5px 10px #999;
         }
 
         h3 {
@@ -59,8 +76,9 @@
     .item-content:first-of-type p:first-of-type 
         {
             color: var(--color-point);
-            @include sub-medium;
+            @include sub-large;
             font-weight: bolder;
+
         }
         
     .item-content:nth-of-type(1) p:nth-of-type(3){
@@ -78,6 +96,12 @@
             @include sub-basic;
             font-weight: bolder;
             padding: 2rem;
+            @include tablet{
+                @include sub-medium;
+            }
+            @include desktop{
+            @include sub-medium;
+        }
     }
     .item-content:nth-of-type(1) p:nth-of-type(4){
             @include sub-medium;
@@ -90,4 +114,80 @@
             padding: 1rem;
             color: var(--color-point);
     }
+    .item-content:nth-of-type(3) p{
+        @include sub-basic;
+        font-weight: bolder;
+        padding: 2rem;
+        @include tablet{
+            @include sub-medium;
+        }
+        @include desktop{
+            @include sub-medium;
+        }
+    }
+    .item-content:nth-of-type(3) p:nth-of-type(4){
+        @include sub-medium;
+        color: var(--color-point);
+        @include tablet{
+            @include sub-large;
+        }
+                @include desktop{
+            @include sub-large;
+        }
+    }
+    .item-content:nth-of-type(4) p{
+        @include sub-basic;
+        font-weight: bolder;
+        padding: 2rem;
+        @include tablet{
+            @include sub-medium;
+        }
+                @include desktop{
+            @include sub-medium;
+        }
+    }
+    .item-content:nth-of-type(4) p:nth-of-type(4){
+        @include sub-medium;
+        color: var(--color-point);
+        @include tablet{
+            @include sub-large;
+        }
+        @include desktop{
+            @include sub-large;
+        }
+    }
+    .item-content:nth-of-type(5) p:nth-of-type(1){
+        @include sub-medium;
+        font-weight: bolder;
+            padding: 1rem;
+            color: var(--color-point);
+    }
+    .item-content:nth-of-type(5) p:nth-of-type(2){
+        @include sub-medium;
+        font-weight: bolder;
+            padding: 2rem;
+            padding-bottom: 5rem;
+            color: var(--color-point);
+    }
+    .item-content:nth-of-type(5) p:nth-of-type(3){
+        @include sub-medium;
+        padding-bottom: 5rem;
+    }
+    .item-content:nth-of-type(5) p:nth-of-type(4){
+        @include sub-medium;
+        padding-bottom: 5rem;
+    }
 }
+
+
+@include tablet{
+    .item-content:first-of-type p:nth-of-type(2){
+        @include sub-large;
+    }
+}
+
+
+
+
+
+// @include desktop{}
