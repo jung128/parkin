@@ -7,13 +7,16 @@ import ItemPageThree from "./Components/ItemPageThree";
 import ItemPageFour from "./Components/ItemPageFour";
 import ItemPageFive from "./Components/ItemPageFive";
 import Coupons from "./Components/Coupons";
+import Brandstory from "./Components/Brandstory";
 
 const App = () => {
+  
   return (
     <div>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainPage />} />
+          <Route path="/brandstory" element={<Brandstory />} />
           <Route path="/itempage" element={<ItemPage />} />
           <Route path="/itempagtwo" element={<ItemPageTwo />} />
           <Route path="/itempagthree" element={<ItemPageThree />} />

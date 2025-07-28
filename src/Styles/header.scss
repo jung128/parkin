@@ -47,12 +47,13 @@
     background-color: var(--color-bg);
     padding: 1rem;
     width: 250px;
-    height: 50vh;
+    height: 60vh;
     ul.nav-list {
       margin-top: 2rem;
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+      // padding-top: 1.5rem;
     }
     .close-btn {
       position: absolute;
@@ -93,7 +94,7 @@
           }
         }
         @include desktop {
-          min-width: 160px;
+          min-width: 170px;
         }
       }
       &.open .submenu {
@@ -175,6 +176,7 @@
     }
   }
 }
+//목록 애니메이션
 @keyframes fadeInUp {
   0% {
     opacity: 0;

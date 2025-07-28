@@ -1,4 +1,6 @@
+
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { TbParkingCircleFilled } from "react-icons/tb";
 import { FaCarOn } from "react-icons/fa6";
 import { IoTicketSharp, IoClose } from "react-icons/io5";
@@ -9,6 +11,7 @@ import Coupons from "./Coupons";
 const Followbanner = () => {
     const [isVisible, setIsVisible] = useState(true);
     const [showCoupons, setShowCoupons] = useState(false);
+
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
@@ -16,9 +19,11 @@ const Followbanner = () => {
     setShowCoupons(true);
   };
 
+
   const closeCouponPopup = () => {
     setShowCoupons(false);
   };
+
     if (!isVisible) return null;
     return (
         <>
@@ -31,13 +36,16 @@ const Followbanner = () => {
                     <TbParkingCircleFilled className="icon" />
                     <span className="text">빈자리 확인</span>
                 </button>
+
                 <button className="banner-item orange">
                     <FaCarOn className="icon" />
                     <span className="text">주차 예약</span>
                 </button>
+
                 <button
                     className="banner-item yellow"
                     onClick={openCouponPopup}
+
                 >
                     <IoTicketSharp className="icon" />
                     <span className="text">할인 쿠폰</span>
@@ -51,8 +59,10 @@ const Followbanner = () => {
                     <span className="text">TOP</span>
                 </button>
                 {showCoupons && <Coupons onClose={closeCouponPopup} />} {/* 팝업 조건부 렌더링 */}
+
             </div>
         </>
     );
 };
+
 export default Followbanner;
