@@ -2,36 +2,74 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  margin: 1rem;
+  gap: 3rem;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  line-height: 1.3;
+  font-size: 1.25rem;
+  width: 100%;
+  @include tablet {
+    width: 50%;
+  }
+  h2 {
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
   .BS-header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     .BS-slogan {
-    }
-    .BS-mind {
+      font-size: 2.5rem;
+      color: var(--color-main);
+      span {
+        color: var(--color-btn);
+      }
     }
   }
-  .BS-behind {
+  .BS-mind {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    gap: 3rem;
   }
   .BS-future {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
   }
   .BS-simbol {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    .BS-colorbox {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem 0;
+      @include desktop {
+        display: flex;
+        flex-direction: row;
+        margin-top: 2rem;
+      }
+      .orange {
+        display: block;
+        background-color: var(--color-main);
+        padding: 2rem 5rem;
+        @include desktop {
+          width: 500px;
+        }
+      }
+      .yellow {
+        display: block;
+        background-color: var(--color-sub);
+        padding: 2rem 5rem;
+        @include desktop {
+          width: 500px;
+        }
+      }
+    }
     .BS-imgbox {
       display: flex;
       flex-direction: column;
@@ -50,7 +88,7 @@
       .mark {
         display: flex;
         justify-content: space-between;
-        @include desktop{
+        @include desktop {
           gap: 1rem;
         }
         div:nth-child(1) > img {
@@ -60,7 +98,7 @@
       .logo {
         display: flex;
         justify-content: space-between;
-        @include desktop{
+        @include desktop {
           gap: 1rem;
         }
         div:nth-child(1) > img {
@@ -82,7 +120,7 @@
         display: flex;
         justify-content: space-between;
         gap: 1rem;
-        @include desktop{
+        @include desktop {
           gap: 1rem;
         }
         div > img {
