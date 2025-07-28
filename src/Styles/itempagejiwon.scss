@@ -289,6 +289,7 @@ html {
 
     h3 {
       @include main-large;
+      text-align: center;
 
       @include tablet {
         @include main-big;
@@ -303,6 +304,7 @@ html {
       color: var(--color-point);
       @include main-basic;
       margin-bottom: 2rem;
+      text-align: center;
 
       @include tablet {
         @include main-large;
@@ -314,6 +316,7 @@ html {
     }
 
     img {
+      display: block;
       width: 100%;
       max-width: 500px;
       height: auto;
@@ -346,6 +349,7 @@ html {
     p {
       @include sub-basic;
       margin: 1rem 0;
+      text-align: center;
 
       @include tablet {
         @include sub-medium;
