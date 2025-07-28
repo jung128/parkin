@@ -315,7 +315,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    gap: 1rem;
+    gap: 2rem;
     .title-box {
       display: flex;
       flex-direction: column;
@@ -334,8 +334,9 @@
         padding: 0 1rem;
         color: var(--color-main-font);
       }
-      h3{
+      p {
         margin: 1rem 0;
+        font-size: 1.2rem;
       }
     }
     div {
@@ -343,15 +344,22 @@
         color: var(--color-point);
         font-size: $font-medium;
         font-weight: 800;
+        span {
+          color: var(--color-main-font);
+          font-size: 1.2rem;
+        }
+      }
+      h3 {
+        font-size: 1.5rem;
       }
       p {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
       }
     }
     .content-text {
       margin: 2rem 0;
       p {
-        font-size: $font-medium;
+        font-size: 1rem;
         font-weight: $font-weight-black;
       }
     }

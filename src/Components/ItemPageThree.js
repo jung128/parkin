@@ -97,42 +97,57 @@ const ItemPageThree = () => {
           <div className="title-box">
             <h1 className="section-title">멤버십 소개</h1>
             <h2 className="section-subtitle">가입만 해도 포인트 지급! </h2>
-            <h3>쓰면 쓸수록 쌓이는 리워드 시스템</h3>
+            <p>쓰면 쓸수록 쌓이는 리워드 시스템</p>
           </div>
-          <img />
+          <img
+            src={`${process.env.PUBLIC_URL}/image/images/su/membership_account.png`}
+            alt="정기권 이미지"
+          />
           <div>
             <h3>
               <strong>월 50,000원</strong>으로 다양한 혜택을 누려보세요
             </h3>
           </div>
           <div>
-            <h2>기본 혜택 : 포인트 적립</h2>
+            <h2>
+              <span>기본 혜택</span>
+              <strong> 포인트 적립</strong>
+            </h2>
             <p>주차만 했을 뿐인데 포인트가 쌓인다?</p>
             <p>멤버십이니까 가능해요!</p>
             <p>가입 즉시 2,000 포인트 + 친구 초대 시 1,000 포인트 지급</p>
-            <p>결제 시 포인트 사용 가능</p>
-            <p>사용 실적에 따라 등급 업그레이드</p>
-            <p>등급별 추가 할인 제공</p>
+            <div className="content-text">
+              <p>결제 시 포인트 사용 가능</p>
+              <p>사용 실적에 따라 등급 업그레이드</p>
+              <p>등급별 추가 할인 제공</p>
+            </div>
           </div>
           <div>
-            <h2>선택 옵션 1. 제휴 매장 할인</h2>
+            <h2>
+              <span>선택 옵션 1. </span>제휴 매장 할인
+            </h2>
             <p>쇼핑은 즐겁게, 주차는 무료로!</p>
             <p>제휴 카페·마트·병원 방문 시 이용</p>
             <p>결제 금액에 따라 자동 주차 할인 적용</p>
             <p>별도 인증 없이 앱과 매장 POS 시스템 연동으로 스마트하게 처리 </p>
-            <p>스타벅스·이마트·스타필드 등 20여곳 사용 가능</p>
-            <p>매장 검색 시 주차 지원 여부 확인 가능</p>
+            <div className="content-text">
+              <p>스타벅스·이마트·스타필드 등 20여곳 사용 가능</p>
+              <p>매장 검색 시 주차 지원 여부 확인 가능</p>
+            </div>
           </div>
 
           <div>
-            <h2>선택 옵션 2. 요금 할인 쿠폰</h2>
+            <h2>
+              <span>선택 옵션 2. </span>요금 할인 쿠폰
+            </h2>
             <p>멤버십 회원만 받는 특별한 할인 혜택</p>
-            <p>알뜰 주차의 시작! </p>
-            <p>이달의 쿠폰 확인하셨나요?</p>
+            <p>이달의 쿠폰으로 알뜰 주차의 시작! </p>
             <p>할인쿠폰으로 스마트하게 주차하세요</p>
-            <p>원하는 이용 시간대나 요일에 적용 가능</p>
-            <p>친구 초대 시 50% 할인 쿠폰 발급 가능</p>
-            <p>생일 고객 1시간 무료 쿠폰 제공</p>
+            <div className="content-text">
+              <p>원하는 이용 시간대나 요일에 적용 가능</p>
+              <p>친구 초대 시 50% 할인 쿠폰 발급 가능</p>
+              <p>생일 고객 1시간 무료 쿠폰 제공</p>
+            </div>
           </div>
         </section>
         <section className="three-item-content3" ref={refSection3}>
