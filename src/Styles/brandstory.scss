@@ -1,9 +1,96 @@
-.brandstory{
-  .BS-header{
-    .BS-slogan{}
-    .BS-mind{}
+.brandstory {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 1rem;
+  .BS-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .BS-slogan {
+    }
+    .BS-mind {
+    }
   }
-  .BS-behind{}
-  .BS-future{}
-  .BS-simbol{}
+  .BS-behind {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .BS-future {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .BS-simbol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .BS-imgbox {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+      @include desktop {
+        flex-direction: row;
+      }
+      p {
+        border-bottom: 1px solid var(--color-main-font);
+      }
+      img {
+        width: 200px;
+      }
+      .mark {
+        display: flex;
+        justify-content: space-between;
+        @include desktop{
+          gap: 1rem;
+        }
+        div:nth-child(1) > img {
+          width: 130px;
+        }
+      }
+      .logo {
+        display: flex;
+        justify-content: space-between;
+        @include desktop{
+          gap: 1rem;
+        }
+        div:nth-child(1) > img {
+          width: 260px;
+          @include desktop {
+            height: 115px;
+            width: auto;
+          }
+        }
+        div:nth-child(2) > img {
+          width: 100px;
+          @include desktop {
+            height: 115px;
+            width: auto;
+          }
+        }
+      }
+      .color {
+        display: flex;
+        justify-content: space-between;
+        @include desktop{
+          gap: 1rem;
+        }
+        div > img {
+          @include desktop {
+            height: 115px;
+            width: auto;
+          }
+        }
+      }
+    }
+  }
 }
