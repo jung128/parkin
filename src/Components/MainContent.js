@@ -60,6 +60,7 @@ const MainContent = () => {
         }
       );
     });
+    ScrollTrigger.refresh();
   }, []);
 
   return (
