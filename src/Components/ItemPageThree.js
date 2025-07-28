@@ -101,7 +101,7 @@ const ItemPageThree = () => {
           </div>
           <img
             src={`${process.env.PUBLIC_URL}/image/images/su/membership_account.png`}
-            alt="정기권 이미지"
+            alt="멤버십 이미지"
           />
           <div>
             <h3>
@@ -153,11 +153,12 @@ const ItemPageThree = () => {
         <section className="three-item-content3" ref={refSection3}>
           <div className="title-box">
             <h1 className="section-title">이용 요금 비교</h1>
-            <h2 className="section-subtitle">
-              가성비가 확실한 P'IN의 정기권·멤버십
-            </h2>
+            <h2 className="section-subtitle">가성비가 확실한 P'IN</h2>
           </div>
-          <img />
+          <img
+            src={`${process.env.PUBLIC_URL}/image/images/su/comparison.png`}
+            alt="요금비교 이미지"
+          />
           <div>
             <h2>한 달에 주차로 들어가는 비용은?</h2>
             <p>일반 주차: 하루 5,000원 × 30일 = 150,000원</p>
@@ -165,16 +166,7 @@ const ItemPageThree = () => {
             <p>멤버십: 추가 포인트/쿠폰/제휴 할인까지 포함</p>
           </div>
           <div>
-            <p></p>
-            <p></p>
-            <p></p>
-            항목 | 일반 요금 | 정기권 이용 시 | 절약 금액 | | | 평일 1시간 주차
-            | 3,000원| 무제한 포함 | 3,000원 | | 주말 하루 6시간 | 18,000원 |
-            무제한 포함| 18,000원 | | 한 달 20일 이용 | 180,000원 | 49,000원 |
-            **131,000원절약!** |
-          </div>
-          <div>
-            <h2>내 주차 패턴에 맞춘 요금제!</h2>
+            <h2>내 주차 패턴에 맞춘 혜택!</h2>
             <p>
               주 5일 이상 주차한다면? → <strong>정기권</strong>이 필수!
             </p>
@@ -188,25 +180,31 @@ const ItemPageThree = () => {
             </p>
           </div>
           <div>
-            <h2>당신에게 맞는 요금제는?</h2>
+            <h2>당신에게 맞는 옵션은?</h2>
             <p>직장인 A씨 “출퇴근 때만 주차 필요해요”</p>
-            <span>[주간 정기권 추천]</span>
+            <span>주간 정기권 추천</span>
             <p>프리랜서 B씨 “자주 이동해서 유동적인 주차가 필요해요”</p>
-            <span>[멤버십 + 쿠폰 추천]</span>
+            <span>멤버십 + 쿠폰 추천</span>
             <p>엄마 C씨 “마트·병원 많이 다녀요”</p>
-            <span>[멤버십 + 제휴 할인]</span>
+            <span>멤버십 + 제휴 할인</span>
           </div>
         </section>
 
         <section className="three-item-content4" ref={refSection4}>
-          <div>
-            <h2>간편하게 시작하세요!</h2>
-            <p>원하는 요금제를 선택하면 바로 구매할 수 있어요</p>
+          <div className="title-box">
+            <h1 className="section-title">간편하게 시작하세요!</h1>
+            <h2 className="section-subtitle">
+              원하는 혜택을 바로 구매할 수 있어요
+            </h2>
           </div>
+          <img
+            src={`${process.env.PUBLIC_URL}/image/images/su/buy.png`}
+            alt="구매 이미지"
+          />
           <div>
-            <h2>웹 및 앱에서 간편한 정기권 구매</h2>
-            <p>매일 주차 스트레스를 줄이고 싶다면? </p>
-            <p>주차할 때마다 혜택을 누리고 싶다면?</p>
+            <h2>웹 및 앱에서 간편한 구매</h2>
+            <p>주차 스트레스를 줄이고 싶다면? </p>
+            <p>주차할 때마다 매일 혜택을 누리고 싶다면?</p>
             <p>
               <strong>P’IN 정기권 & 멤버십</strong>으로 지금 바로 시작해보세요!
             </p>
