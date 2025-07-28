@@ -5,8 +5,8 @@
   @include tablet {
     display: block;
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 0;
+    right: 0;
     width: 220px;
     border-radius: 15px 0 0 0;
     overflow: hidden;
@@ -81,7 +81,7 @@
 
   position: fixed;
   bottom: 400px;
-  right: 100px;
+  right: 90px;
   background-color: var(--color-dark-gray);
   color: var(--color-white);
   border: none;
