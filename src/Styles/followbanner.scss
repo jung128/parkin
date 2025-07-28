@@ -106,7 +106,6 @@
 
 .follow-banner {
   display: none;
-
   @include tablet {
     display: block;
     position: fixed;
@@ -120,11 +119,9 @@
     z-index: 1000;
     background-color: var(--color-white);
   }
-
   @include desktop {
     display: block;
   }
-
   .banner-item {
     all: unset; // 버튼 기본값 제거
     text-align: center;
@@ -139,34 +136,27 @@
     height: 65px;
     text-align: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
-
     .icon {
       font-size: 22px;
       margin-bottom: 6px;
       color: var(--color-main-font);
     }
-
     .text {
       @include sub-basic;
       color: var(--color-main-font);
     }
-
     &.orange {
       background-color: var(--color-btn);
     }
-
     &.yellow {
       background-color: var(--color-sub);
     }
-
     &:last-child {
       border-bottom: none;
     }
-
     &:hover {
       background-color: var(--color-dark-gray);
       transform: scale(1.05);
-
       .icon,
       .text {
         color: var(--color-white);
@@ -174,18 +164,14 @@
     }
   }
 }
-
 .floating-close-btn {
   display: none;
-
   @include tablet {
     display: flex;
   }
-
   @include desktop {
     display: flex;
   }
-
   position: fixed;
   bottom: 440px;
   right: 71px;
@@ -202,9 +188,14 @@
   z-index: 1100;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease, transform 0.3s ease;
-
   &:hover {
     background-color: var(--color-btn-hover);
     transform: scale(1.1);
   }
 }
+
+
+
+
+
+

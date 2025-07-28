@@ -7,6 +7,9 @@ import Header from "./Header";
 gsap.registerPlugin(ScrollTrigger);
 
 const ItemPageFour = () => {
+        useEffect(() => {
+    window.scrollTo(0, 0);
+    }, []);
     useEffect(() => {
         const timer = setTimeout(() => {
             const title = document.querySelector(".top-item h1");

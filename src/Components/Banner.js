@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import Coupons from "./Coupons";
+
 
 const Banner = () => {
   const [deviceMode, setDeviceMode] = useState("mobile");
@@ -6,6 +8,7 @@ const Banner = () => {
   const [currentTextSlide, setCurrentTextSlide] = useState(0);
   const [slideWidth, setSlideWidth] = useState(window.innerWidth);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isCouponOpen, setIsCouponOpen] = useState(false);
 
 const slides = [
     `${process.env.PUBLIC_URL}/image/images/main.png`,
@@ -32,7 +35,7 @@ const slides = [
 
   // 간격 상수 정의 - 태블릿에서만 사용
   const GAP_SIZE = 15; // CSS의 gap과 동일한 값
-  
+
   // 이미지 슬라이드 영역
   useEffect(() => {
     const updateDeviceMode = () => {
@@ -63,15 +66,15 @@ const slides = [
     const autoSlideInterval = setInterval(() => {
       handleSlideChange(1);
     }, 5000);
-    
+
     return () => clearInterval(autoSlideInterval);
   }, [deviceMode, slides.length, isTransitioning]);
 
   const handleSlideChange = (dir) => {
     if (isTransitioning) return;
-    
+
     setIsTransitioning(true);
-    
+
     const step = deviceMode === "tablet" ? 3 : 1;
     const maxIndex = deviceMode === "tablet" ? slides.length - 3 : slides.length - 1;
 
@@ -93,7 +96,7 @@ const slides = [
       // 왼쪽으로 이동
       if (currentSlide <= 0) {
         setCurrentSlide(-step);
-        
+
         setTimeout(() => {
           setIsTransitioning(false);
           setCurrentSlide(maxIndex);
@@ -118,9 +121,16 @@ const slides = [
     return textItems.slice(startIndex, startIndex + 4);
   };
 
+  const handleTextClick = (item) => {
+    if (item === '할인/쿠폰') {
+      setIsCouponOpen(true);
+    }
+  };
+
+
   // 간격을 고려한 translateX 계산 - 태블릿에서만 간격 적용
-  const translateX = deviceMode === "tablet" 
-    ? currentSlide * (slideWidth + GAP_SIZE) 
+  const translateX = deviceMode === "tablet"
+    ? currentSlide * (slideWidth + GAP_SIZE)
     : currentSlide * slideWidth;
 
   return (
@@ -130,7 +140,8 @@ const slides = [
         {deviceMode === "mobile" ? (
           <div className="text-grid-mobile">
             {getVisibleTextItems().map((item, index) => (
-              <div key={`${currentTextSlide}-${index}`} className="text-item-mobile">
+              <div key={`${currentTextSlide}-${index}`} className="text-item-mobile"
+                onClick={() => { handleTextClick(item) }}>
                 {item}
               </div>
             ))}
@@ -163,14 +174,14 @@ const slides = [
           ))}
         </div>
       ) : (
-        <div className="slider-container" style={{ 
+        <div className="slider-container" style={{
           maxWidth: `${slideWidth * (deviceMode === "tablet" ? 3 : 1) + (deviceMode === "tablet" ? GAP_SIZE * 2 : 0)}px`
         }}>
           <div
             className="slider-wrapper"
             style={{
               transform: `translateX(-${translateX}px)`,
-              width: deviceMode === "tablet" 
+              width: deviceMode === "tablet"
                 ? `${extendedSlides.length * (slideWidth + GAP_SIZE)}px`
                 : `${extendedSlides.length * slideWidth}px`,
               transition: isTransitioning ? 'transform 0.5s ease' : 'none'
@@ -188,6 +199,10 @@ const slides = [
               <button className="nav-arrow prev" onClick={() => handleSlideChange(-1)}>‹</button>
               <button className="nav-arrow next" onClick={() => handleSlideChange(1)}>›</button>
             </>
+          )}
+
+          {isCouponOpen && (
+            <Coupons onClose={() => setIsCouponOpen(false)} />
           )}
         </div>
       )}

@@ -1,12 +1,14 @@
 import { useEffect } from "react";
-import Header from "./Header";
 import Footer from "./Footer";
+import Header from "./Header";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ItemPageTwo = () => {
+    useEffect(() => {
+    window.scrollTo(0, 0);
     const contentItems = [
         {
             title: "맞춤형 추천",
