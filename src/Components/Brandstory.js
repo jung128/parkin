@@ -180,7 +180,7 @@ const Brandstory = () => {
               <div>
                 <p>Word Mark</p>
                 <img
-                  src={`${process.env.PUBLIC_URL}/image/logo/Logo2-07.png`}
+                  src={`${process.env.PUBLIC_URL}/image/logo/logo2-07.png`}
                   alt="워드 마크"
                 />
               </div>
@@ -196,7 +196,7 @@ const Brandstory = () => {
               <div>
                 <p>Vertical</p>
                 <img
-                  src={`${process.env.PUBLIC_URL}/image/logo/Logo2-05.png`}
+                  src={`${process.env.PUBLIC_URL}/image/logo/logo2-05.png`}
                   alt="세로버전로고"
                 />
               </div>
@@ -205,14 +205,14 @@ const Brandstory = () => {
               <div>
                 <p>Colors</p>
                 <img
-                  src={`${process.env.PUBLIC_URL}/image/logo/Logo2-04.png`}
+                  src={`${process.env.PUBLIC_URL}/image/logo/logo2-04.png`}
                   alt="메인색깔로고"
                 />
               </div>
               <div>
                 <p>Gray Scale</p>
                 <img
-                  src={`${process.env.PUBLIC_URL}/image/logo/Logo2-03.png`}
+                  src={`${process.env.PUBLIC_URL}/image/logo/logo2-03.png`}
                   alt="회색깔로고"
                 />
               </div>
