@@ -116,7 +116,7 @@
     overflow: hidden;
     @include sub-medium;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    z-index: 100;
     background-color: var(--color-white);
   }
   @include desktop {
@@ -185,7 +185,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 1100;
+  z-index: 110;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease, transform 0.3s ease;
   &:hover {
