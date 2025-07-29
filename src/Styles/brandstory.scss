@@ -51,12 +51,12 @@
       @include desktop {
         display: flex;
         flex-direction: row;
-        margin-top: 2rem;
+        margin-top:2rem;
       }
       .orange {
         display: block;
         background-color: var(--color-main);
-        padding: 2rem 5rem;
+        padding: 2rem 4rem;
         @include desktop {
           width: 500px;
         }
@@ -64,7 +64,7 @@
       .yellow {
         display: block;
         background-color: var(--color-sub);
-        padding: 2rem 5rem;
+        padding: 2rem 4rem;
         @include desktop {
           width: 500px;
         }
@@ -75,9 +75,10 @@
       flex-direction: column;
       justify-content: center;
       gap: 2rem;
-      padding: 2rem;
+      margin: 4rem auto;
       @include desktop {
         flex-direction: row;
+        width: 50%;
       }
       p {
         border-bottom: 1px solid var(--color-main-font);
@@ -88,8 +89,13 @@
       .mark {
         display: flex;
         justify-content: space-between;
+        gap: 1rem;
         @include desktop {
           gap: 1rem;
+        }
+        @media (max-width:420px) {
+          
+          flex-direction: column;
         }
         div:nth-child(1) > img {
           width: 130px;
@@ -98,8 +104,12 @@
       .logo {
         display: flex;
         justify-content: space-between;
+        gap: 1rem;
         @include desktop {
           gap: 1rem;
+        }
+        @media (max-width:420px) {
+          flex-direction: column;
         }
         div:nth-child(1) > img {
           width: 260px;
@@ -122,6 +132,9 @@
         gap: 1rem;
         @include desktop {
           gap: 1rem;
+        }
+        @media (max-width:420px) {
+          flex-direction: column;
         }
         div > img {
           @include desktop {
