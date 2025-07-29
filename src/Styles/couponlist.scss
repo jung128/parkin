@@ -1,8 +1,6 @@
 .coupon-list-popup{
     @include sub-medium;
-}
-
-ul{
+    ul{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,3 +39,5 @@ ul{
     background-color: var(--color-btn);
     color: var(--color-white);
 }
+}
+
