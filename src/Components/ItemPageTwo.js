@@ -7,7 +7,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const ItemPageTwo = () => {
-    useEffect(() => {
+    useEffect{() => {
     window.scrollTo(0, 0);
     const contentItems = [
         {
@@ -34,7 +34,7 @@ const ItemPageTwo = () => {
             text2: "프리미엄 경험을 위한 부가기능이에요",
             image: "/image/images/two/item2-4.png"
         }
-    ];
+    ]};
     const TextWithBreaks = ({ text }) =>
         text.split("\n").map((line, i) => (
             <span key={i}>
