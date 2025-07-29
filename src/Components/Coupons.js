@@ -32,6 +32,12 @@ const Coupons = ({ onClose }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        if (!phone.trim()) {
+            setStatus('📱 휴대폰 번호를 입력하세요.');
+            return;
+        }
+
         setStatus('처리중...');
 
         const { data: existing } = await supabase
@@ -65,7 +71,7 @@ const Coupons = ({ onClose }) => {
                 created_at: new Date().toISOString()
             });
             setShowGift(true);
-            setPhone('');
+            // setPhone('');
             setStatus(`${randomType} 할인 쿠폰이 발급되었습니다!`);
         }
     };
@@ -79,7 +85,14 @@ const Coupons = ({ onClose }) => {
                     <CouponList
                         phone={couponInfo?.phone || phone}
                         couponData={couponInfo}
-                        onClose={() => setShowList(false)} />
+                        onClose={() => {
+                            setShowList(false);         // 쿠폰 리스트 숨기기
+                            setCouponInfo(null);        // 쿠폰 정보 초기화
+                            setPhone('');               // 입력 번호 초기화
+                            setCouponType('');          // 쿠폰 타입 초기화
+                            setShowGift(false);         // 발급된 선물 표시 제거
+                            setStatus('');              // 메시지 초기화
+                        }} />
                 ) : (
                     <>
                         <h3>휴대폰 번호로 쿠폰 받기</h3>
@@ -93,7 +106,7 @@ const Coupons = ({ onClose }) => {
                                 placeholder="010-0000-0000"
                                 value={phone}
                                 onChange={(e) => setPhone(e.target.value)}
-                                required
+                            // required
                             />
                             <button type="submit" className="click-btn">
                                 쿠폰 발급 하기
@@ -109,7 +122,36 @@ const Coupons = ({ onClose }) => {
                             <button
                                 type="button"
                                 className="ok-btn"
-                                onClick={() => setShowList(true)}
+                                onClick={() => {
+                                    if (!phone) {
+                                        setStatus('📱 휴대폰 번호를 입력하세요.');
+                                        return;
+                                    }
+
+                                    // 쿠폰이 발급된 경우 couponInfo가 이미 있으므로 showList만 true로
+                                    if (couponInfo && couponInfo.phone === phone) {
+                                        setShowList(true);
+                                        return;
+                                    }
+
+                                    // 새 번호일 경우 해당 번호로 DB에서 조회
+                                    const fetchExistingCoupon = async () => {
+                                        const { data, error } = await supabase
+                                            .from('coupons')
+                                            .select('*')
+                                            .eq('phone', phone)
+                                            .single();
+
+                                        if (data) {
+                                            setCouponInfo(data);
+                                            setShowList(true);
+                                        } else {
+                                            setStatus('❗ 해당 번호로 발급된 쿠폰이 없습니다.');
+                                        }
+                                    };
+
+                                    fetchExistingCoupon();
+                                }}
                             >
                                 내 쿠폰 보기
                             </button>
