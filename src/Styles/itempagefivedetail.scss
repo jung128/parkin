@@ -12,6 +12,10 @@
 
 .top-item {
     margin-top: 8rem;
+    @include desktop{
+        width: 90%;
+        height: auto;
+    }
 }
 
 .item-list{
@@ -54,12 +58,16 @@
         transition: all 0.3s ease;
 
         img {
-            width: 95%;
-            height: 100%;
+            width: 90%;
             height: auto;
             margin: 0 auto;
             box-shadow: 5px 5px 10px #999;
             margin-bottom: 8rem;
+            @include desktop{
+                width: 70%;
+                height: 100%;
+                margin: 0 auto;
+            }
         }
 
         h3 {
