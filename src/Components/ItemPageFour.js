@@ -176,7 +176,7 @@ const ItemPageFour = () => {
 
     <div className="item-content" id="usage-section">
         <h3>어떻게 이용하나요?</h3>
-        <img src={`${process.env.PUBLIC_URL}/image/images/jungimg/pp.jpg`} alt="메인 이미지" className="shrink3" />
+        <img src={`${process.env.PUBLIC_URL}/image/images/jungimg/PP.jpg`} alt="메인 이미지" className="shrink3" />
         <div className="ul-list">
             <ul>
                 <p>1. 주차장 선택</p>
