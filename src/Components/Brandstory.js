@@ -112,7 +112,7 @@ const Brandstory = () => {
         />
         <div className="BS-header">
           <h1 className="BS-slogan">
-            돌지 말고, 바로 <span>Park In</span>
+            돌지 말고, 바로 <br/> <span>Park In</span>
           </h1>
         </div>
         <div className="BS-mind">
