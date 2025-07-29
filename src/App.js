@@ -1,5 +1,5 @@
 import "./App.scss";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import MainPage from "./Components/MainPage";
 import ItemPage from "./Components/ItemPage";
 import ItemPageTwo from "./Components/ItemPageTwo";
@@ -13,7 +13,7 @@ const App = () => {
   
   return (
     <div>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/brandstory" element={<Brandstory />} />
@@ -24,7 +24,7 @@ const App = () => {
           <Route path="/itempagefive" element={<ItemPageFive />} />
           <Route path="/coupons" element={<Coupons/>}/>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
 
     </div>
   );
