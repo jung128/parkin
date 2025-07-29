@@ -39,5 +39,8 @@
     background-color: var(--color-btn);
     color: var(--color-white);
 }
+.back-btn:hover{
+        background-color: var(--color-btn-hover);
+    }
 }
 

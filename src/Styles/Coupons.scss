@@ -55,6 +55,9 @@ form {
         outline: none;
         color: var(--color-white);
     }
+    .click-btn:hover{
+        background-color: var(--color-btn-hover);
+    }
 
     .gift {
         display: none;
@@ -88,14 +91,39 @@ form {
     }
 
     .ok-btn {
-        @include sub-medium;
-        padding: 0.8rem 0.2rem;
-        display: inline-block;
-        border: none;
-        outline: none;
-        border-bottom: 1px solid #222;
-        background-color: #ffffff;
+    @include sub-medium;
+    padding: 0.8rem 0.2rem;
+    display: inline-block;
+    border: none;
+    outline: none;
+    background-color: #ffffff;
+    position: relative;
+    transition: transform 0.3s ease;
+
+    // 기본 밑줄
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%) scaleX(0); // 가운데 시작
+        transform-origin: center;
+        width: 50%;
+        height: 1px;
+        background-color: var(--color-main);
+        transition: transform 0.3s ease;
     }
+
+    // 호버 시 효과
+    &:hover {
+        transform: scale(1.05); // 전체 확대
+        color: var(--color-main);
+
+        &::after {
+            transform: translateX(-50%) scaleX(1); // 가운데에서 양 옆으로 펼쳐짐
+        }
+    }
+}
 }
 
 .close-btn {
