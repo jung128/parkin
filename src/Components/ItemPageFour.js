@@ -135,6 +135,7 @@ const ItemPageFour = () => {
 
     return (
         <div className="four">
+            <Header />
          {/* 안전을 위한 cctv (정회윤) */}
 <div className="top-item">
     <img src={`${process.env.PUBLIC_URL}/image/images/jungimg/cctvimg.jpg`} alt="메인 이미지" className="shrink" />
@@ -230,6 +231,7 @@ const ItemPageFour = () => {
         </p>
     </div>
 </div>
+<Footer />
 </div>
     );
 };
