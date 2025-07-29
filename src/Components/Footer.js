@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="footer-page">
             <div className="footer-wrap">
                 <div className="img-company-group">
-                    <img src="../image/logo/Logo-08.png" alt="푸터로고이미지" />
+                    <img src={`${process.env.PUBLIC_URL}/image/logo/Logo-08.png`} alt="푸터로고이미지" />
                     <div className="company">
                         <p>(주)P'IN</p>
                         <p>대표자 박서윤</p>
