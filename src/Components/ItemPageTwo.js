@@ -7,8 +7,6 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const ItemPageTwo = () => {
-    useEffect{() => {
-    window.scrollTo(0, 0);
     const contentItems = [
         {
           title: "맞춤형 추천",
@@ -37,8 +35,6 @@ const ItemPageTwo = () => {
       ];
       
       const TextWithBreaks = ({ text }) =>
-    ]};
-    const TextWithBreaks = ({ text }) =>
         text.split("\n").map((line, i) => (
           <span key={i}>
             {line}
