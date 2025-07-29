@@ -21,9 +21,9 @@ useEffect(() => {
           <Route path="/" element={<MainPage />} />
           <Route path="/brandstory" element={<Brandstory />} />
           <Route path="/itempage" element={<ItemPage />} />
-          <Route path="/itempagtwo" element={<ItemPageTwo />} />
-          <Route path="/itempagthree" element={<ItemPageThree />} />
-          <Route path="/itempagfour" element={<ItemPageFour />} />
+          <Route path="/itempagetwo" element={<ItemPageTwo />} />
+          <Route path="/itempagethree" element={<ItemPageThree />} />
+          <Route path="/itempagefour" element={<ItemPageFour />} />
           <Route path="/itempagefive" element={<ItemPageFive />} />
           <Route path="/coupons" element={<Coupons />} />
         </Routes>

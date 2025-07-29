@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import Banner from "./Banner";
 import ContentsList from "./ContentsList";
-import Coupons from "./Coupons";
 import Followbanner from "./Followbanner";
 import Footer from "./Footer";
 import Header from "./Header";

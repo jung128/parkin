@@ -24,13 +24,13 @@ const MainContent = ({ scrollRefs }) => {
       navigate("/itempage"); // ItemPage로 이동
     }
     if (idx === 1) {
-      navigate("/itempagtwo");
+      navigate("/itempagetwo");
     }
     if (idx === 2) {
-      navigate("/itempagthree");
+      navigate("/itempagethree");
     }
     if (idx === 3) {
-      navigate("/itempagfour");
+      navigate("/itempagefour");
       window.scrollTo(0, 0);
     }
     if (idx === 4) {
