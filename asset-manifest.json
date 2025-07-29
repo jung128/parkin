@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/parkin/static/css/main.7d431748.css",
-    "main.js": "/parkin/static/js/main.cd726071.js",
+    "main.js": "/parkin/static/js/main.57c47e35.js",
     "index.html": "/parkin/index.html",
     "main.7d431748.css.map": "/parkin/static/css/main.7d431748.css.map",
-    "main.cd726071.js.map": "/parkin/static/js/main.cd726071.js.map"
+    "main.57c47e35.js.map": "/parkin/static/js/main.57c47e35.js.map"
   },
   "entrypoints": [
     "static/css/main.7d431748.css",
-    "static/js/main.cd726071.js"
+    "static/js/main.57c47e35.js"
   ]
 }
