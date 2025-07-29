@@ -1,11 +1,27 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .top-item {
+  text-align: center;
+  margin-bottom: 12rem;
+
+  @include desktop {
+    margin-bottom: 17rem;
+  }
+
   img {
     margin-bottom: 5rem auto;
     width: 90%;
     height: auto;
-  }
 
-  text-align: center;
+    @include desktop {
+      width: auto !important;
+      max-width: 35% !important;
+      height: auto;
+      display: block;
+    }
+  }
 
   h1 {
     color: var(--color-main);
@@ -80,6 +96,7 @@
         border: none;
         outline: none;
         background-color: var(--color-bg);
+        @include sub-basic;
       }
     }
   }
@@ -109,17 +126,17 @@
       color: var(--color-main);
       margin: 3.5rem auto;
       margin-top: 5rem;
-      @include main-large;
+      @include main-big;
     }
 
-    h2{
-        @include main-basic;
+    h2 {
+      @include main-large;
     }
 
     p {
       text-align: center;
       margin-bottom: 5rem;
-      @include sub-basic;
+      @include sub-medium;
     }
   }
 
@@ -132,7 +149,7 @@
 
     h3 {
       color: var(--color-main);
-      @include main-large;
+      @include main-big;
       margin: 0 auto;
     }
 
@@ -167,6 +184,10 @@
         &:hover::after {
           width: 100%;
         }
+
+        button {
+          @include sub-medium;
+        }
       }
     }
   }
@@ -197,8 +218,8 @@
       @include main-big;
     }
 
-    h2{
-        @include main-large;
+    h2 {
+      @include main-large;
     }
 
     p {
@@ -253,10 +274,9 @@
           width: 100%;
         }
 
-        button{
-            @include sub-medium;
+        button {
+          @include sub-medium;
         }
-
       }
     }
   }
@@ -264,20 +284,215 @@
 
 .contents {
   .item-content {
+    margin: 12rem 0;
+    position: relative;
+
     h3 {
+      @include main-large;
       text-align: center;
-      margin-bottom: 1rem;
+
+      @include tablet {
+        @include main-big;
+      }
+
+      @include desktop {
+        @include main-big;
+      }
     }
-    p,
-    li {
+
+    .sub-ment {
+      color: var(--color-point);
+      @include main-basic;
+      margin-bottom: 2rem;
       text-align: center;
-      margin-bottom: 0.5rem;
+
+      @include tablet {
+        @include main-large;
+      }
+
+      @include desktop {
+        @include main-large;
+      }
     }
+
     img {
       display: block;
-      width: 90%;
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      object-fit: contain;
       margin: 0 auto;
-      margin-bottom: 1rem;
+
+      @include tablet {
+        max-width: 400px;
+      }
+
+      @include desktop {
+        max-width: 500px;
+      }
+    }
+
+    h2 {
+      @include main-basic;
+      text-align: center;
+      margin-top: 3rem;
+
+      @include tablet {
+        @include main-large;
+      }
+
+      @include desktop {
+        @include main-large;
+      }
+    }
+
+    p {
+      @include sub-basic;
+      margin: 1rem 0;
+      text-align: center;
+
+      @include tablet {
+        @include sub-medium;
+      }
+
+      @include desktop {
+        @include sub-medium;
+      }
+    }
+
+    // 아이콘 공통 스타일
+    .parking-1,
+    .parking-2,
+    .small-car,
+    .disabled,
+    .pregnant {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      color: var(--color-main);
+      width: 48px;
+      height: 48px;
+
+      @include tablet {
+        width: 60px;
+        height: 60px;
+      }
+
+      @include desktop {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    // 개별 위치
+    .parking-1 {
+      top: 32%;
+      left: 32%;
+
+      @include tablet {
+        top: 31%;
+        left: 40%;
+      }
+
+      @include desktop {
+        top: 31%;
+        left: 44.5%;
+      }
+    }
+
+    .parking-2 {
+      top: 24%;
+      left: 77.5%;
+
+      @include tablet {
+        top: 24.5%;
+        left: 66.5%;
+      }
+
+      @include desktop {
+        top: 24%;
+        left: 58%;
+      }
+    }
+
+    .small-car {
+      top: 39%;
+      left: 60%;
+
+      @include tablet {
+        top: 37%;
+        left: 56%;
+      }
+
+      @include desktop {
+        top: 38%;
+        left: 53%;
+      }
+    }
+
+    .disabled {
+      top: 45%;
+      left: 16%;
+
+      @include tablet {
+        top: 42%;
+        left: 31%;
+      }
+
+      @include desktop {
+        top: 43%;
+        left: 40%;
+      }
+    }
+
+    .pregnant {
+      top: 47%;
+      left: 76.5%;
+
+      @include tablet {
+        top: 44%;
+        left: 65.5%;
+      }
+
+      @include desktop {
+        top: 45.5%;
+        left: 58%;
+      }
+    }
+
+    .all-icon-wrap {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem; //아이콘 간격
+      margin: 1.5rem 0;
+
+      @include desktop {
+        grid-gap: 0.5rem;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .icon-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        svg {
+          width: 40px;
+          height: 40px;
+
+          @include tablet {
+            width: 60px;
+            height: 60px;
+          }
+
+          @include desktop {
+            width: 80px;
+            height: 80px;
+          }
+        }
+      }
     }
   }
 }

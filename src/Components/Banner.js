@@ -10,14 +10,14 @@ const Banner = () => {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [isCouponOpen, setIsCouponOpen] = useState(false);
 
-  const slides = [
-    "/image/images/main.png",
-    "/image/images/save.png",
-    "/image/images/membership.png",
-    "/image/images/CCTV.png",
-    "/image/images/cupon.png",
-    "/image/images/navi.png"
-  ];
+const slides = [
+    `${process.env.PUBLIC_URL}/image/images/main.png`,
+    `${process.env.PUBLIC_URL}/image/images/save.png`,
+    `${process.env.PUBLIC_URL}/image/images/membership.png`,
+    `${process.env.PUBLIC_URL}/image/images/CCTV.png`,
+    `${process.env.PUBLIC_URL}/image/images/cupon.png`,
+    `${process.env.PUBLIC_URL}/image/images/navi.png`
+];
 
   // 슬라이드 복제 - 무한 루프 효과를 위해
   const extendedSlides = [...slides, ...slides.slice(0, 3)];
