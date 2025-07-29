@@ -27,6 +27,7 @@ const Followbanner = () => {
     if (!isVisible) return null;
     return (
         <>
+         {showCoupons && <Coupons onClose={closeCouponPopup} />} {/* 팝업 조건부 렌더링 */}
             {/* X 버튼 */}
             <button className="floating-close-btn" onClick={() => setIsVisible(false)}>
                 <IoClose />
@@ -58,7 +59,7 @@ const Followbanner = () => {
                     <MdOutlineKeyboardArrowUp className="icon" />
                     <span className="text">TOP</span>
                 </button>
-                {showCoupons && <Coupons onClose={closeCouponPopup} />} {/* 팝업 조건부 렌더링 */}
+            
 
             </div>
         </>
