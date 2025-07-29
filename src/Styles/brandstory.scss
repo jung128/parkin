@@ -11,6 +11,9 @@
   @include tablet {
     width: 50%;
   }
+  @include desktop {
+    width: 50%;
+  }
   h2 {
     font-weight: 800;
     margin-bottom: 0.5rem;
