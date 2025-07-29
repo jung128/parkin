@@ -17,6 +17,7 @@ const ItemPageThree = () => {
       const scrollToSection = (ref) => {
         ref.current?.scrollIntoView({ behavior: "smooth" });
       };
+      
   return (
     <div>
       <Header />

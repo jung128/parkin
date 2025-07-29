@@ -5,14 +5,20 @@ import { BiSolidCctv } from "react-icons/bi";
 import { MdPhonelinkRing } from "react-icons/md";
 
 
-const Circle = () => {
+const Circle = ({ scrollRefs }) => {
+  const scrollToli = (idx) => {
+    const target = scrollRefs.current[idx];
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
   return (
     <div className="circle-layout">
       <h2 className="circle-title">
         내비 찍기 전에 자리부터 <span>P’IN</span>
       </h2>
       <ul className="circle">
-        <li>
+        <li onClick={() => scrollToli(0)}>
           <div className="circle-bg">
             <FaMapMarkerAlt />
           </div>
@@ -22,7 +28,7 @@ const Circle = () => {
             빈자리 확인
           </p>
         </li>
-        <li>
+        <li onClick={() => scrollToli(0)}>
           <div className="circle-bg">
             <BiSolidNavigation />
           </div>
@@ -32,7 +38,7 @@ const Circle = () => {
             예약/길안내
           </p>
         </li>
-        <li>
+        <li onClick={() => scrollToli(1)}>
           <div className="circle-bg">
             <IoPerson />
           </div>
@@ -42,7 +48,7 @@ const Circle = () => {
             혜택
           </p>
         </li>
-        <li>
+        <li onClick={() => scrollToli(2)}>
           <div className="circle-bg">
             <BiSolidCctv />
           </div>
@@ -52,7 +58,7 @@ const Circle = () => {
             CCTV
           </p>
         </li>
-        <li>
+        <li onClick={() => scrollToli(3)}>
           <div className="circle-bg">
             <MdPhonelinkRing />
           </div>

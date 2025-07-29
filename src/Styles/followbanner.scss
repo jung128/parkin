@@ -110,9 +110,9 @@
     display: block;
     position: fixed;
     bottom: 10px;
-    right: 10px;
+    right: 0;
     width: 160px;
-    border-radius: 15px 0 0 0;
+    border-radius: 15px 0 0 15px;
     overflow: hidden;
     @include sub-medium;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
@@ -174,7 +174,7 @@
   }
   position: fixed;
   bottom: 440px;
-  right: 71px;
+  right: 60px;
   background-color: var(--color-dark-gray);
   color: var(--color-white);
   border: none;
