@@ -1,6 +1,6 @@
 import "./App.scss";
 import { useEffect } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import MainPage from "./Components/MainPage";
 import ItemPage from "./Components/ItemPage";
 import ItemPageTwo from "./Components/ItemPageTwo";
@@ -16,7 +16,7 @@ useEffect(() => {
       }, []);
   return (
     <div>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/brandstory" element={<Brandstory />} />
@@ -27,7 +27,7 @@ useEffect(() => {
           <Route path="/itempagefive" element={<ItemPageFive />} />
           <Route path="/coupons" element={<Coupons />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 };

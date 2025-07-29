@@ -21,6 +21,20 @@ const Footer = () => {
             <p>사업자 번호 123-45-67890</p>
             <p>고객센터 1234-5678</p>
           </div>
+        <div className="footer-page">
+            <div className="footer-wrap">
+                <div className="img-company-group">
+                    <img src={`${process.env.PUBLIC_URL}/image/logo/Logo-08.png`} alt="푸터로고이미지" />
+                    <div className="company">
+                        <p>(주)P'IN</p>
+                        <p>대표자 박서윤</p>
+                    </div>
+                </div>
+                <div className="info">
+                    <p>주소 수원시 팔달구 매산로</p>
+                    <p>사업자 번호 123-45-67890</p>
+                    <p>고객센터 1234-5678</p>
+                </div>
 
           {/* 새로 만든 하단 영역 */}
           <div className="footer-bottom">

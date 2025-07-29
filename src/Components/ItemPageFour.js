@@ -225,6 +225,10 @@ const ItemPageFour = () => {
             className="shrink3"
           />
           <div className="ul-list">
+    <div className="item-content" id="usage-section">
+        <h3>어떻게 이용하나요?</h3>
+        <img src={`${process.env.PUBLIC_URL}/image/images/jungimg/PP.jpg`} alt="메인 이미지" className="shrink3" />
+        <div className="ul-list">
             <ul>
               <p>1. 주차장 선택</p>
               <li>GPS를 활용해 내 위치 주변 주차장을 검색</li>
