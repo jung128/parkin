@@ -110,13 +110,13 @@
     display: block;
     position: fixed;
     bottom: 10px;
-    right: 0;
+    right: 10px;
     width: 160px;
-    border-radius: 15px 0 0 15px;
+    border-radius: 15px 0 0 0;
     overflow: hidden;
     @include sub-medium;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    z-index: 100;
     background-color: var(--color-white);
   }
   @include desktop {
@@ -174,7 +174,7 @@
   }
   position: fixed;
   bottom: 440px;
-  right: 60px;
+  right: 71px;
   background-color: var(--color-dark-gray);
   color: var(--color-white);
   border: none;
@@ -185,7 +185,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 1100;
+  z-index: 110;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease, transform 0.3s ease;
   &:hover {
