@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { IoGift } from "react-icons/io5";
 import { createClient } from '@supabase/supabase-js';
-
+import CouponList from './CouponList';
 
 const supabase = createClient(
     'https://omuurjgdsyvillyeomvw.supabase.co',
@@ -13,20 +13,28 @@ const Coupons = ({ onClose }) => {
     const [status, setStatus] = useState('');
     const [showGift, setShowGift] = useState(false);
     const [couponType, setCouponType] = useState('');
+    const [showList, setShowList] = useState(false);
+    const [couponInfo, setCouponInfo] = useState(null);
+
+    const generateCouponCode = () => {
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        let code = '';
+        for (let i = 0; i < 8; i++) {
+            code += chars[Math.floor(Math.random() * chars.length)];
+        }
+        return `CPN-${code}`;
+    };
 
     const getRandomDiscount = () => {
         const discounts = ['10%', '20%', '30%'];
-        const randomIndex = Math.floor(Math.random() * discounts.length);
-        return discounts[randomIndex];
+        return discounts[Math.floor(Math.random() * discounts.length)];
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('처리중...');
 
-        
-
-        const { data: existing, error: fetchError } = await supabase
+        const { data: existing } = await supabase
             .from('coupons')
             .select('id')
             .eq('phone', phone)
@@ -36,22 +44,29 @@ const Coupons = ({ onClose }) => {
             setStatus('❗ 이미 쿠폰을 발급받으셨습니다.');
             return;
         }
+
         const randomType = getRandomDiscount();
+        const randomCode = generateCouponCode();
         setCouponType(randomType);
 
         const { error } = await supabase.from('coupons').insert([
             {
                 phone,
                 type: randomType,
+                code: randomCode,  // ← 반드시 포함해야 code가 저장됨
             },
         ]);
-
-        if (error) {
-            setStatus('오류 발생: ' + error.message);
-        } else {
-            setStatus(`${randomType} 할인 쿠폰이 발급되었습니다!`);
+        if (!error) {
+            setCouponInfo({
+                phone: phone,
+                type: randomType,
+                code: randomCode,
+                used: false,
+                created_at: new Date().toISOString()
+            });
             setShowGift(true);
             setPhone('');
+            setStatus(`${randomType} 할인 쿠폰이 발급되었습니다!`);
         }
     };
 
@@ -59,24 +74,50 @@ const Coupons = ({ onClose }) => {
         <div className="popup-overlay">
             <div className="coupon-popup">
                 <button className="close-btn" onClick={onClose}>×</button>
-                <h3>휴대폰 번호로 쿠폰 받기</h3>
-                <p className="sub-text">휴대폰 번호를 입력하고 <br/>쿠폰을 발급받으세요.</p>
-                <form onSubmit={handleSubmit}>
-                    <input
-                        type="tel"
-                        placeholder="010-0000-0000"
-                        value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
-                        required
-                    />
-                    <button type="submit" className="click-btn">쿠폰 발급 하기</button>
-                    <div className={`gift ${showGift ? 'show' : ''}`}>
-                        <p className="gift-icons"><IoGift />{`${couponType} 할인 쿠폰이 발급되었습니다!`}</p>
-                    
-                    </div>
-                    <button className="ok-btn">내 쿠폰 보기</button>
-                </form>
-                {status && !showGift && <p>{status}</p>}
+
+                {showList ? (
+                    <CouponList
+                        phone={couponInfo?.phone || phone}
+                        couponData={couponInfo}
+                        onClose={() => setShowList(false)} />
+                ) : (
+                    <>
+                        <h3>휴대폰 번호로 쿠폰 받기</h3>
+                        <p className="sub-text">
+                            휴대폰 번호를 입력하고 <br />
+                            쿠폰을 발급받으세요.
+                        </p>
+                        <form onSubmit={handleSubmit}>
+                            <input
+                                type="tel"
+                                placeholder="010-0000-0000"
+                                value={phone}
+                                onChange={(e) => setPhone(e.target.value)}
+                                required
+                            />
+                            <button type="submit" className="click-btn">
+                                쿠폰 발급 하기
+                            </button>
+
+                            <div className={`gift ${showGift ? 'show' : ''}`}>
+                                <p className="gift-icons">
+                                    <IoGift />
+                                    {`${couponType} 할인 쿠폰이 발급되었습니다!`}
+                                </p>
+                            </div>
+
+                            <button
+                                type="button"
+                                className="ok-btn"
+                                onClick={() => setShowList(true)}
+                            >
+                                내 쿠폰 보기
+                            </button>
+                        </form>
+
+                        {status && !showGift && <p>{status}</p>}
+                    </>
+                )}
             </div>
         </div>
     );

@@ -1,7 +1,6 @@
 import { useRef, useEffect } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
-import { useEffect } from 'react';
 /* .정기권 및 멤버십 혜택 (정수진) */
 /* 이미지도 기능페이지에 맞게 개인적으로 수정해서 사용 */
 
@@ -9,21 +8,15 @@ const ItemPageThree = () => {
       useEffect(() => {
       window.scrollTo(0, 0);
       }, []);
-    return (
-      <>
-        <Header />
-        <div className="three-item-header">
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-  const refSection1 = useRef(null);
-  const refSection2 = useRef(null);
-  const refSection3 = useRef(null);
-  const refSection4 = useRef(null);
-  const scrollToSection = (ref) => {
-    ref.current?.scrollIntoView({ behavior: "smooth" });
-  };
 
+      const refSection1 = useRef(null);
+      const refSection2 = useRef(null);
+      const refSection3 = useRef(null);
+      const refSection4 = useRef(null);
+
+      const scrollToSection = (ref) => {
+        ref.current?.scrollIntoView({ behavior: "smooth" });
+      };
   return (
     <div>
       <Header />

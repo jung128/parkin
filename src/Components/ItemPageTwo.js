@@ -11,36 +11,39 @@ const ItemPageTwo = () => {
     window.scrollTo(0, 0);
     const contentItems = [
         {
-            title: "맞춤형 추천",
-            text1: "맞춤형 추천으로 \n 손쉽게 주차자리를 탐색하는 기능이 있어요",
-            text2: "나에게 최적화된 주차장과 추천요금제까지 제안받아요",
-            image: "/image/images/two/item2-1.png"
+          title: "맞춤형 추천",
+          text1: "맞춤형 추천으로 \n 손쉽게 주차자리를 탐색하는 기능이 있어요",
+          text2: "나에게 최적화된 주차장과 추천요금제까지 제안받아요",
+          image: "/image/images/two/item2-1.png"
         },
         {
-            title: "원터치 사전결제",
-            text1: "원터치 사전결제로 \n 미리 결제하고 정산없이 나갈 수 있어요",
-            text2: "사용자의 시간을 소중하게 생각하는 시간절약 서비스에요",
-            image: "/image/images/two/item2-2.png"
+          title: "원터치 사전결제",
+          text1: "원터치 사전결제로 \n 미리 결제하고 정산없이 나갈 수 있어요",
+          text2: "사용자의 시간을 소중하게 생각하는 시간절약 서비스에요",
+          image: "/image/images/two/item2-2.png"
         },
         {
-            title: "스마트 예약과 관리",
-            text1: "스마트예약 관리 및 안내 서비스",
-            text2: "예약 완료 후에도 필요한 정보를 \n 언제든지 확인할 수 있어요",
-            image: "/image/images/two/item2-3.png"
+          title: "스마트 예약과 관리",
+          text1: "스마트예약 관리 및 안내 서비스",
+          text2: "예약 완료 후에도 필요한 정보를 \n 언제든지 확인할 수 있어요",
+          image: "/image/images/two/item2-3.png"
         },
         {
-            title: "이용후기/24시 고객지원",
-            text1: "이용후기 & 24시 고객지원",
-            text2: "프리미엄 경험을 위한 부가기능이에요",
-            image: "/image/images/two/item2-4.png"
+          title: "이용후기/24시 고객지원",
+          text1: "이용후기 & 24시 고객지원",
+          text2: "프리미엄 경험을 위한 부가기능이에요",
+          image: "/image/images/two/item2-4.png"
         }
+      ];
+      
+      const TextWithBreaks = ({ text }) =>
     ]};
     const TextWithBreaks = ({ text }) =>
         text.split("\n").map((line, i) => (
-            <span key={i}>
-                {line}
-                <br />
-            </span>
+          <span key={i}>
+            {line}
+            <br />
+          </span>
         ));
     useEffect(() => {
         window.scrollTo(0, 0);
