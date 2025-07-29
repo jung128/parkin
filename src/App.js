@@ -1,4 +1,5 @@
 import "./App.scss";
+import { useEffect } from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import MainPage from "./Components/MainPage";
 import ItemPage from "./Components/ItemPage";
@@ -10,7 +11,9 @@ import Coupons from "./Components/Coupons";
 import Brandstory from "./Components/Brandstory";
 
 const App = () => {
-  
+useEffect(() => {
+      window.scrollTo(0, 0);
+      }, []);
   return (
     <div>
       <HashRouter>
@@ -22,10 +25,9 @@ const App = () => {
           <Route path="/itempagthree" element={<ItemPageThree />} />
           <Route path="/itempagfour" element={<ItemPageFour />} />
           <Route path="/itempagefive" element={<ItemPageFive />} />
-          <Route path="/coupons" element={<Coupons/>}/>
+          <Route path="/coupons" element={<Coupons />} />
         </Routes>
       </HashRouter>
-
     </div>
   );
 };

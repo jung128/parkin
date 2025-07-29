@@ -10,12 +10,31 @@ const Brandstory = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
 
-    gsap.utils.toArray(".BS-mind > div").forEach((el) => {
+    requestAnimationFrame(() => {
+      gsap.utils.toArray(".BS-mind > div").forEach((el) => {
+        gsap.fromTo(
+          el,
+          {
+            opacity: 0,
+            x: 50,
+          },
+          {
+            opacity: 1,
+            x: 0,
+            duration: 1,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 40%",
+            },
+          }
+        );
+      });
       gsap.fromTo(
-        el,
+        ".BS-future",
         {
           opacity: 0,
-          x: 50,
+          x: 100,
         },
         {
           opacity: 1,
@@ -23,80 +42,64 @@ const Brandstory = () => {
           duration: 1,
           ease: "power2.out",
           scrollTrigger: {
-            trigger: el,
+            trigger: ".BS-future",
             start: "top 40%",
           },
         }
       );
-    });
-    gsap.fromTo(
-      ".BS-future",
-      {
-        opacity: 0,
-        x: 100,
-      },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ".BS-future",
-          start: "top 40%",
+      gsap.fromTo(
+        ".BS-simbol > div",
+        {
+          opacity: 0,
+          x: 100,
         },
-      }
-    );
-    gsap.fromTo(
-      ".BS-simbol > div",
-      {
-        opacity: 0,
-        x: 100,
-      },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ".BS-simbol",
-          start: "top 40%",
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".BS-simbol",
+            start: "top 40%",
+          },
+        }
+      );
+      gsap.fromTo(
+        ".BS-colorbox > div",
+        {
+          opacity: 0,
+          y: 40,
         },
-      }
-    );
-    gsap.fromTo(
-      ".BS-colorbox > div",
-      {
-        opacity: 0,
-        y: 40,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        stagger: 0.3,
-        scrollTrigger: {
-          trigger: ".BS-colorbox",
-          start: "top 40%",
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          stagger: 0.3,
+          scrollTrigger: {
+            trigger: ".BS-colorbox",
+            start: "top 40%",
+          },
+        }
+      );
+      gsap.fromTo(
+        ".BS-imgbox > div",
+        {
+          opacity: 0,
+          y: 40,
         },
-      }
-    );
-    gsap.fromTo(
-      ".BS-imgbox > div",
-      {
-        opacity: 0,
-        y: 40,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        stagger: 0.3,
-        scrollTrigger: {
-          trigger: ".BS-imgbox",
-          start: "top 50%",
-        },
-      }
-    );
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          stagger: 0.3,
+          scrollTrigger: {
+            trigger: ".BS-imgbox",
+            start: "top 50%",
+          },
+        }
+      );
+    }, 3000);
+    ScrollTrigger.refresh();
   }, []);
 
   return (

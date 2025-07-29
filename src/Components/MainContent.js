@@ -6,9 +6,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const MainContent = () => {
+const MainContent = ({ scrollRefs }) => {
   const [isTablet, setIsTablet] = useState(window.innerWidth >= 768);
-  const sectionsRef = useRef([]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -38,15 +37,13 @@ const MainContent = () => {
       navigate("/itempagefive");
     }
   };
-
-  useEffect(() => {
-    sectionsRef.current.forEach((el) => {
+useEffect(() => {
+  const timeout = setTimeout(() => {
+    scrollRefs.current.forEach((el) => {
+      if (!el) return;
       gsap.fromTo(
         el,
-        {
-          opacity: 0,
-          y: 50,
-        },
+        { opacity: 0, y: 50 },
         {
           opacity: 1,
           y: 0,
@@ -62,7 +59,10 @@ const MainContent = () => {
       );
     });
     ScrollTrigger.refresh();
-  }, []);
+  }, 1000); 
+
+  return () => clearTimeout(timeout);
+}, []);
 
   return (
     <main className="main-content">
@@ -70,7 +70,7 @@ const MainContent = () => {
         <section
           className="main-map"
           key={section.id}
-          ref={(el) => (sectionsRef.current[idx] = el)}
+          ref={(el) => (scrollRefs.current[idx] = el)}
         >
           <img
             src={
