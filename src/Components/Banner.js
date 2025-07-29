@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import Coupons from "./Coupons";
+import { useNavigate } from "react-router-dom";
 
 
 const Banner = () => {
+  const navigate = useNavigate();
   const [deviceMode, setDeviceMode] = useState("mobile");
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentTextSlide, setCurrentTextSlide] = useState(0);
@@ -10,7 +12,7 @@ const Banner = () => {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [isCouponOpen, setIsCouponOpen] = useState(false);
 
-const slides = [
+  const slides = [
     `${process.env.PUBLIC_URL}/image/images/main.png`,
     `${process.env.PUBLIC_URL}/image/images/save.png`,
     `${process.env.PUBLIC_URL}/image/images/membership.png`,
@@ -122,11 +124,20 @@ const slides = [
   };
 
   const handleTextClick = (item) => {
-    if (item === '할인/쿠폰') {
+    if (item === "할인/쿠폰") {
       setIsCouponOpen(true);
+    } else if (item === "주차장 찾기") {
+      navigate("/itempage");
+    } else if (item === "주차예약") {
+      navigate("/itempagetwo");
+    } else if (item === "정기권/멤버십") {
+      navigate("/itempagethree");
+    } else if (item === "CCTV") {
+      navigate("/itempagefour");
+    } else if (item === "개인 주차장 공유") {
+      navigate("/itempagefive");
     }
   };
-
 
   // 간격을 고려한 translateX 계산 - 태블릿에서만 간격 적용
   const translateX = deviceMode === "tablet"
@@ -140,8 +151,13 @@ const slides = [
         {deviceMode === "mobile" ? (
           <div className="text-grid-mobile">
             {getVisibleTextItems().map((item, index) => (
-              <div key={`${currentTextSlide}-${index}`} className="text-item-mobile"
-                onClick={() => { handleTextClick(item) }}>
+              <div
+                key={`${currentTextSlide}-${index}`}
+                className="text-item-mobile"
+                onClick={() => {
+                  handleTextClick(item);
+                }}
+              >
                 {item}
               </div>
             ))}
@@ -149,7 +165,13 @@ const slides = [
         ) : (
           <div className="text-flex-tablet">
             {textItems.map((item, index) => (
-              <div key={index} className="text-item-tablet">
+              <div
+                key={index}
+                className="text-item-tablet"
+                onClick={() => {
+                  handleTextClick(item);
+                }}
+              >
                 {item}
               </div>
             ))}
@@ -158,8 +180,18 @@ const slides = [
 
         {deviceMode === "mobile" && (
           <>
-            <button onClick={() => changeTextSlide(-1)} className="text-nav-button prev">‹</button>
-            <button onClick={() => changeTextSlide(1)} className="text-nav-button next">›</button>
+            <button
+              onClick={() => changeTextSlide(-1)}
+              className="text-nav-button prev"
+            >
+              ‹
+            </button>
+            <button
+              onClick={() => changeTextSlide(1)}
+              className="text-nav-button next"
+            >
+              ›
+            </button>
           </>
         )}
       </div>
@@ -174,21 +206,32 @@ const slides = [
           ))}
         </div>
       ) : (
-        <div className="slider-container" style={{
-          maxWidth: `${slideWidth * (deviceMode === "tablet" ? 3 : 1) + (deviceMode === "tablet" ? GAP_SIZE * 2 : 0)}px`
-        }}>
+        <div
+          className="slider-container"
+          style={{
+            maxWidth: `${
+              slideWidth * (deviceMode === "tablet" ? 3 : 1) +
+              (deviceMode === "tablet" ? GAP_SIZE * 2 : 0)
+            }px`,
+          }}
+        >
           <div
             className="slider-wrapper"
             style={{
               transform: `translateX(-${translateX}px)`,
-              width: deviceMode === "tablet"
-                ? `${extendedSlides.length * (slideWidth + GAP_SIZE)}px`
-                : `${extendedSlides.length * slideWidth}px`,
-              transition: isTransitioning ? 'transform 0.5s ease' : 'none'
+              width:
+                deviceMode === "tablet"
+                  ? `${extendedSlides.length * (slideWidth + GAP_SIZE)}px`
+                  : `${extendedSlides.length * slideWidth}px`,
+              transition: isTransitioning ? "transform 0.5s ease" : "none",
             }}
           >
             {extendedSlides.map((slide, index) => (
-              <div className="slide" key={index} style={{ width: `${slideWidth}px` }}>
+              <div
+                className="slide"
+                key={index}
+                style={{ width: `${slideWidth}px` }}
+              >
                 <img src={slide} alt={`slide-${index}`} />
               </div>
             ))}
@@ -196,16 +239,23 @@ const slides = [
           {/* 화살표: 데스크탑에서는 숨김 */}
           {deviceMode !== "desktop" && (
             <>
-              <button className="nav-arrow prev" onClick={() => handleSlideChange(-1)}>‹</button>
-              <button className="nav-arrow next" onClick={() => handleSlideChange(1)}>›</button>
+              <button
+                className="nav-arrow prev"
+                onClick={() => handleSlideChange(-1)}
+              >
+                ‹
+              </button>
+              <button
+                className="nav-arrow next"
+                onClick={() => handleSlideChange(1)}
+              >
+                ›
+              </button>
             </>
-          )}
-
-          {isCouponOpen && (
-            <Coupons onClose={() => setIsCouponOpen(false)} />
           )}
         </div>
       )}
+      {isCouponOpen && <Coupons onClose={() => setIsCouponOpen(false)} />}
     </>
   );
 };
