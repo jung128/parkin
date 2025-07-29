@@ -10,11 +10,23 @@ const supabase = createClient(
 );
 
 const Coupons = ({ onClose }) => {
+
+    // 사용자가 입력한 휴대폰 번호를 저장하는 상태
     const [phone, setPhone] = useState("");
+
+    // 상태 메시지 (예: 에러 안내, 처리중 메시지 등)를 저장하는 상태
     const [status, setStatus] = useState("");
+
+    // 쿠폰 발급 성공 시 아이콘/알림창을 보여줄지 여부
     const [showGift, setShowGift] = useState(false);
+
+    // 발급된 쿠폰의 할인 종류 (예: "10%", "20%")를 저장
     const [couponType, setCouponType] = useState("");
+
+    // "내 쿠폰 보기" 버튼 클릭 시 쿠폰 리스트를 보여줄지 여부
     const [showList, setShowList] = useState(false);
+
+    // 현재 발급된 쿠폰의 전체 정보를 저장 (전화번호, 코드, 할인율 등)
     const [couponInfo, setCouponInfo] = useState(null);
 
 
@@ -124,29 +136,38 @@ const Coupons = ({ onClose }) => {
                             휴대폰 번호를 입력하고 <br />
                             쿠폰을 발급받으세요.
                         </p>
+
+                        {/* // 쿠폰 발급 및 조회를 위한 입력 폼 */}
                         <form onSubmit={handleSubmit}>
+
+                            {/* 휴대폰 번호 입력 필드 */}
                             <input
-                                type="tel"
+                                type="tel" // 전화번호 형식
                                 placeholder="010-0000-0000"
-                                value={phone}
-                                onChange={(e) => setPhone(e.target.value)}
-                            // required
+                                value={phone} // 상태와 바인딩
+                                onChange={(e) => setPhone(e.target.value)} // 입력 시 상태 업데이트
                             />
+
+
+                            {/* 쿠폰 발급 버튼 - 폼 제출 트리거 */}
                             <button type="submit" className="click-btn">
                                 쿠폰 발급 하기
                             </button>
 
+                            {/* 쿠폰 발급 완료 후 보여줄 선물 아이콘 영역 */}
                             <div className={`gift ${showGift ? "show" : ""}`}>
                                 <p className="gift-icons">
                                     <IoGift />
-                                    {`${couponType} 할인 쿠폰이 발급되었습니다!`}
+                                    {`${couponType} 할인 쿠폰이 발급되었습니다!`} {/* 발급된 쿠폰 종류 */}
                                 </p>
                             </div>
 
+                            {/* "내 쿠폰 보기" 버튼 */}
                             <button
                                 type="button"
                                 className="ok-btn"
                                 onClick={() => {
+                                    // 전화번호가 입력되지 않은 경우
                                     if (!phone) {
                                         setStatus("📱 휴대폰 번호를 입력하세요.");
                                         return;
@@ -154,7 +175,7 @@ const Coupons = ({ onClose }) => {
 
                                     // 쿠폰이 발급된 경우 couponInfo가 이미 있으므로 showList만 true로
                                     if (couponInfo && couponInfo.phone === phone) {
-                                        setShowList(true);
+                                        setShowList(true); // 쿠폰 리스트 화면으로 전환
                                         return;
                                     }
 
@@ -163,17 +184,19 @@ const Coupons = ({ onClose }) => {
                                         const { data, error } = await supabase
                                             .from("coupons")
                                             .select("*")
-                                            .eq("phone", phone)
-                                            .single();
+                                            .eq("phone", phone) // 입력된 번호로 필터링
+                                            .single(); // 단일 결과만 가져옴
 
                                         if (data) {
+                                            // 쿠폰이 존재할 경우 상태 저장 및 리스트 화면 전환
                                             setCouponInfo(data);
                                             setShowList(true);
                                         } else {
+                                            // 쿠폰이 존재할 경우 상태 저장 및 리스트 화면 전환
                                             setStatus("❗ 해당 번호로 발급된 쿠폰이 없습니다.");
                                         }
                                     };
-
+                                    // 비동기 함수 실행
                                     fetchExistingCoupon();
                                 }}
                             >
