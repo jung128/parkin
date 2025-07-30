@@ -22,11 +22,7 @@
         font-weight: bolder;
         line-height: 1.6;
         
-        &:last-child {
-            color: var(--color-main);
-            font-weight: 700;
-            margin-top: 1rem;
-        }
+
     }
 }
 
@@ -139,6 +135,12 @@
             margin-bottom: 1rem;
             @include sub-basic;
             font-weight: bolder;
+        }
+
+    }
+    .item-content{
+        p:nth-child(2) {
+        font-size: 0.5rem;
         }
     }
 
@@ -417,5 +419,6 @@
             }
         }
     }
+    
 }
 }
