@@ -13,11 +13,7 @@
 - **메인 컬러**로 **오렌지(#ffa500)** 색상을 사용하여 브랜드의 활력과 에너지를 전달하고자 하였습니다.
 - **서브 컬러**로 **선명한 옐로우(#ffcd00)** 색상을 사용하여 사용해 밝고 긍정적인 이미지로 사용자의 주목을 끌도록 하였습니다.
 - 그 외에는 기본 컬러인 
-**bg-color(#FEF9F3)**, 
-**button(#FF6103)**,  
-**point-color(#426A2D)**,  
-**main-font(#2C2C2C)**,
-**sub-font(#4F4F4F)**,
+미색(#FEF9F3) 외 (회색)4종
 를 함께 사용하여 적은 색상 구성으로 눈의 피로도를 줄였습니다.
 
 ### 3. 폰트 사용 
@@ -37,7 +33,7 @@
 - **프레임워크** : React
 - **프론트엔드 개발** : React, SCSS
 - **데이터베이스 관리** : Supabase
-- **플러그인** : react-slick, slick-carousel, react-icons, SCSS, Web Font, GSAP, AOS, Supabase-js
+- **플러그인** : react-slick, slick-carousel, react-icons, SCSS, Web Font, GSAP, AOS, Supabase-js, canvas-confetti
 
 ## 문제점 및 개선 계획
 ### 1. 제작 사이트 문제점
